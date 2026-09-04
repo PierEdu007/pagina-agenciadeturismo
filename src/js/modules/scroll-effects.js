@@ -30,30 +30,52 @@ export function initScrollEffects() {
     }, { passive: true });
   }
 
-  // Menú móvil hamburguesa
+  // Menú móvil hamburguesa con animaciones
   const mobileToggle = document.querySelector(".mobile-toggle");
   const navMenu = document.querySelector(".nav-menu");
+  const navOverlay = document.getElementById("nav-overlay");
+
+  function openMobileMenu() {
+    navMenu.classList.add("open");
+    mobileToggle.classList.add("is-active");
+    mobileToggle.setAttribute("aria-label", "Cerrar menú de navegación");
+    document.body.classList.add("nav-open");
+    if (navOverlay) navOverlay.classList.add("is-visible");
+  }
+
+  function closeMobileMenu() {
+    navMenu.classList.remove("open");
+    mobileToggle.classList.remove("is-active");
+    mobileToggle.setAttribute("aria-label", "Abrir menú de navegación");
+    document.body.classList.remove("nav-open");
+    if (navOverlay) navOverlay.classList.remove("is-visible");
+  }
 
   if (mobileToggle && navMenu) {
+    // Toggle al hacer clic en el botón hamburguesa
     mobileToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("open");
-      const icon = mobileToggle.querySelector("i");
-      if (icon) {
-        if (navMenu.classList.contains("open")) {
-          icon.className = "fa-solid fa-xmark";
-        } else {
-          icon.className = "fa-solid fa-bars";
-        }
+      if (navMenu.classList.contains("open")) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
       }
     });
 
+    // Cerrar al hacer clic en el overlay
+    if (navOverlay) {
+      navOverlay.addEventListener("click", closeMobileMenu);
+    }
+
     // Cerrar al hacer clic en un enlace del menú
     navMenu.querySelectorAll(".nav-link").forEach(link => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("open");
-        const icon = mobileToggle.querySelector("i");
-        if (icon) icon.className = "fa-solid fa-bars";
-      });
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    // Cerrar con la tecla Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && navMenu.classList.contains("open")) {
+        closeMobileMenu();
+      }
     });
   }
 
