@@ -38,4 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Inicializar scroll suave y animaciones
   initScrollEffects();
+
+  // Quitar clase preload para activar transiciones solo después de la carga inicial
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      document.body.classList.remove("preload");
+    });
+  });
 });

@@ -141,6 +141,8 @@ export function openBookingDrawer(tourId) {
 
   // Recalcular y abrir
   recalculateTotals();
+  backdrop.style.display = "flex";
+  void backdrop.offsetWidth; // Forzar reflow para que la animación CSS corra suavemente
   backdrop.classList.add("is-open");
   document.body.style.overflow = "hidden";
 }
@@ -151,6 +153,11 @@ export function closeBookingDrawer() {
 
   backdrop.classList.remove("is-open");
   document.body.style.overflow = "";
+  setTimeout(() => {
+    if (!backdrop.classList.contains("is-open")) {
+      backdrop.style.display = "none";
+    }
+  }, 350);
 }
 
 function renderTourExtras(tour) {

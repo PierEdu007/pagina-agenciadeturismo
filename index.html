@@ -16,10 +16,16 @@
   <!-- FontAwesome 6 Iconos Vectoriales Optimizados -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
+  <!-- Prevenir FOUC y transiciones fantasma durante la carga inicial -->
+  <style>
+    body { opacity: 0; }
+    .preload, .preload * { transition: none !important; -webkit-transition: none !important; }
+  </style>
+
   <!-- Script Principal de Vite (Importa CSS y JS Modular) -->
   <script type="module" src="/src/js/main.js"></script>
 </head>
-<body>
+<body class="preload">
 
   <!-- Barra de Navegación Flotante con Glassmorphism -->
   <header class="header-wrapper">
@@ -320,7 +326,7 @@
   </section>
 
   <!-- Modal / Drawer Interactivo de Pre-Reserva (Preparado para Culqi) -->
-  <div class="booking-modal-backdrop" id="booking-modal-backdrop" aria-hidden="true">
+  <div class="booking-modal-backdrop" id="booking-modal-backdrop" style="display: none;" aria-hidden="true">
     <div class="booking-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
       <!-- Encabezado del Drawer -->
       <div class="drawer-header">

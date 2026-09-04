@@ -20,6 +20,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   position: relative;
+  /* Anti-FOUC: sobreescribe el opacity:0 inline del <head> */
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 /* Selección de texto */
