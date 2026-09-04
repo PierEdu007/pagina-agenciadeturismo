@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanpinahuasi Travel | Turismo Auténtico y Sanación Andina en Cusco</title>
+  <meta name="description" content="Hanpinahuasi Travel. Operador turístico formal en Cusco. Experiencias místicas, medicina ancestral andina, Machu Picchu y rutas exclusivas en grupos reducidos." />
+  <meta name="theme-color" content="#0F1412" />
+  <link rel="icon" type="image/png" href="/images/logo-hanpinahuasi.png" />
+
+  <!-- Tipografías de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Uncial+Antiqua&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 Iconos Vectoriales Optimizados -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Script Principal de Vite (Importa CSS y JS Modular) -->
+  <script type="module" src="/src/js/main.js"></script>
+</head>
+<body>
+
+  <!-- Barra de Navegación Flotante con Glassmorphism -->
+  <header class="header-wrapper">
+    <nav class="navbar">
+      <a href="#" class="logo" title="Hanpinahuasi Travel Cusco">
+        <img src="/images/logo-hanpinahuasi.png" alt="Hanpinahuasi Travel Logo Oficial" class="logo-img" />
+        Hanpinahuasi <span>Travel</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#tours" class="nav-link">Experiencias</a></li>
+        <li><a href="#por-que-hanpinahuasi" class="nav-link">Por qué Hanpinahuasi</a></li>
+        <li><a href="#galeria" class="nav-link">Galería</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li class="mobile-nav-cta" style="display: none;">
+          <button class="btn btn-primary" style="width: 100%;" onclick="window.openBookingDrawer && window.openBookingDrawer('machu-picchu-clasico')">
+            <i class="fa-solid fa-calendar-check"></i> Reservar Experiencia
+          </button>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Selector de Moneda Interactivo -->
+        <div class="currency-toggle" title="Cambiar divisa de tarifas">
+          <button class="currency-btn active" data-currency="USD">USD $</button>
+          <button class="currency-btn" data-currency="PEN">PEN S/</button>
+        </div>
+
+        <button class="btn btn-primary btn-sm" onclick="window.openBookingDrawer && window.openBookingDrawer('machu-picchu-clasico')" title="Reservar">
+          <i class="fa-solid fa-calendar-check"></i> <span class="btn-text-nav">Reservar</span>
+        </button>
+
+        <button class="mobile-toggle" aria-label="Abrir menú de navegación">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Cinematográfico con Video y Scrollytelling -->
+  <section class="hero">
+    <div class="hero-media-wrapper">
+      <video 
+        class="hero-video" 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        poster="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1920&q=80"
+      >
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-clouds-over-a-mountain-valley-41484-large.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-texture"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge shimmer-effect">
+        <i class="fa-solid fa-award"></i>
+        <span>Agencia Certificada DIRCETUR Cusco</span>
+      </div>
+
+      <h1 class="hero-title">
+        Descubre el alma del Cusco <span>sin prisas ni multitudes</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Rutas exclusivas en grupos reducidos de máximo 8 viajeros, guías locales certificados y logística impecable desde tu llegada a los Andes.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#tours" class="btn btn-primary shimmer-effect">
+          <i class="fa-solid fa-compass"></i> Ver Experiencias
+        </a>
+        <button class="btn btn-outline" onclick="window.openBookingDrawer && window.openBookingDrawer('machu-picchu-clasico')">
+          <i class="fa-solid fa-calculator"></i> Cotizar Online
+        </button>
+      </div>
+    </div>
+
+    <!-- Indicador de Scroll Interactivo -->
+    <a href="#confianza" class="scroll-down-cue">
+      <div class="mouse-icon">
+        <div class="mouse-wheel scroll-indicator-dot"></div>
+      </div>
+      <span>Explorar</span>
+    </a>
+  </section>
+
+  <!-- Divisor Andino en Curva SVG -->
+  <div class="section-divider" style="background-color: #0F1412;">
+    <svg viewBox="0 0 1200 48" preserveAspectRatio="none" fill="#FFFFFF">
+      <path d="M0,0 C300,48 900,48 1200,0 L1200,48 L0,48 Z"></path>
+    </svg>
+  </div>
+
+  <!-- Cinta de Confianza y Marquesina Infinita -->
+  <section class="trust-marquee" id="confianza">
+    <div class="marquee-track">
+      <!-- Grupo 1 -->
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-solid fa-users-line"></i></div>
+        <span><strong>Máximo 8 viajeros</strong> por grupo</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-solid fa-kit-medical"></i></div>
+        <span><strong>Oxígeno y botiquín</strong> de alta montaña</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-solid fa-star"></i></div>
+        <span><strong>4.9 / 5</strong> en TripAdvisor & Google Reviews</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <span><strong>Reserva directa</strong> por WhatsApp</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-solid fa-award"></i></div>
+        <span><strong>Agencia Formal</strong> DIRCETUR Reg. 4821</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-solid fa-person-hiking"></i></div>
+        <span><strong>Guías Oficiales</strong> cusqueños bilingües</span>
+      </div>
+
+      <!-- Duplicado para ciclo continuo sin saltos -->
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-solid fa-users-line"></i></div>
+        <span><strong>Máximo 8 viajeros</strong> por grupo</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-solid fa-kit-medical"></i></div>
+        <span><strong>Oxígeno y botiquín</strong> de alta montaña</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-solid fa-star"></i></div>
+        <span><strong>4.9 / 5</strong> en TripAdvisor & Google Reviews</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <span><strong>Reserva directa</strong> por WhatsApp</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-solid fa-award"></i></div>
+        <span><strong>Agencia Formal</strong> DIRCETUR Reg. 4821</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-solid fa-person-hiking"></i></div>
+        <span><strong>Guías Oficiales</strong> cusqueños bilingües</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Tours con Carrusel Táctil Swiper -->
+  <main class="tours-section" id="tours">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">
+          <i class="fa-solid fa-map-location-dot"></i> Rutas Seleccionadas
+        </span>
+        <h2>Experiencias Diseñadas a Medida</h2>
+        <p>Tarifas transparentes con circuitos oficiales garantizados, trenes panorámicos y grupos reducidos.</p>
+      </div>
+
+      <!-- Contenedor del Carrusel Swiper -->
+      <div class="tours-carousel-wrapper">
+        <div class="swiper swiper-container-tours">
+          <div class="swiper-wrapper" id="tours-slider-wrapper">
+            <!-- Las tarjetas se generan dinámicamente desde src/data/tours.js -->
+          </div>
+        </div>
+
+        <!-- Controles del Carrusel (Flechas y Paginación) -->
+        <div class="carousel-controls">
+          <button class="carousel-nav-btn btn-prev" aria-label="Tour anterior">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="swiper-pagination-tours"></div>
+          <button class="carousel-nav-btn btn-next" aria-label="Siguiente tour">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Por Qué Hanpinahuasi Travel (Diferenciales Clave) -->
+  <section class="container reveal-on-scroll" id="por-que-hanpinahuasi" style="padding-top: 2rem; padding-bottom: 5rem;">
+    <div class="section-header">
+      <span class="section-tag">
+        <i class="fa-solid fa-leaf"></i> Filosofía Hanpinahuasi
+      </span>
+      <h2>La Casa de la Sanación y Aventura</h2>
+      <p>En quechua, <em>Hanpi</em> significa medicina y <em>Huasi</em> significa hogar. Diseñamos viajes que renuevan el cuerpo y el espíritu en armonía con la Pachamama.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+      <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem 1.5rem; text-align: left; box-shadow: var(--shadow-sm);">
+        <div style="width: 52px; height: 52px; border-radius: var(--radius-pill); background: var(--color-terracotta-subtle); color: var(--color-terracotta); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1.25rem;">
+          <i class="fa-solid fa-users-rays"></i>
+        </div>
+        <h4 style="font-size: 1.15rem; margin-bottom: 0.6rem; color: var(--color-text-main);">Grupos Reducidos Reales</h4>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.55;">
+          Máximo 8 viajeros por expedición. Cero aglomeraciones, atención cercana y tiempo para contemplar cada santuario andino con tranquilidad.
+        </p>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem 1.5rem; text-align: left; box-shadow: var(--shadow-sm);">
+        <div style="width: 52px; height: 52px; border-radius: var(--radius-pill); background: rgba(32, 65, 53, 0.1); color: var(--color-green-andes); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1.25rem;">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <h4 style="font-size: 1.15rem; margin-bottom: 0.6rem; color: var(--color-text-main);">Salud & Protocolos de Altura</h4>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.55;">
+          Oxígeno medicinal portátil, monitoreo con pulsioxímetro y botiquín de primeros auxilios de alta montaña en cada una de nuestras salidas.
+        </p>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem 1.5rem; text-align: left; box-shadow: var(--shadow-sm);">
+        <div style="width: 52px; height: 52px; border-radius: var(--radius-pill); background: var(--color-gold-glow); color: #B37D4A; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1.25rem;">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+        <h4 style="font-size: 1.15rem; margin-bottom: 0.6rem; color: var(--color-text-main);">Medicina Ancestral & Ayni</h4>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.55;">
+          Conexión genuina con las comunidades locales, abuelas sabias y rituales tradicionales de agradecimiento a los Apus y la Madre Tierra.
+        </p>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem 1.5rem; text-align: left; box-shadow: var(--shadow-sm);">
+        <div style="width: 52px; height: 52px; border-radius: var(--radius-pill); background: var(--color-cream-subtle); color: var(--color-text-main); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1.25rem;">
+          <i class="fa-solid fa-shield-check"></i>
+        </div>
+        <h4 style="font-size: 1.15rem; margin-bottom: 0.6rem; color: var(--color-text-main);">Boletos Oficiales Garantizados</h4>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.55;">
+          Emisión oficial directa ante el Ministerio de Cultura para los mejores circuitos de Machu Picchu y trenes panorámicos sin intermediarios.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bento Grid de Experiencias y Cultura Andina con Fotos Reales -->
+  <section class="bento-section" id="galeria">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">
+          <i class="fa-solid fa-camera"></i> Rincones Sagrados
+        </span>
+        <h2>Paisajes y Rostros que Conectan con el Alma</h2>
+        <p>Momentos auténticos capturados en nuestras rutas comunitarias y santuarios milenarios del Cusco.</p>
+      </div>
+
+      <div class="bento-grid reveal-on-scroll">
+        <!-- Item 1: Machu Picchu Gran Angular -->
+        <div class="bento-item bento-col-8">
+          <img src="https://images.unsplash.com/photo-1509299349698-dd22323b5963?auto=format&fit=crop&w=1200&q=80" alt="Amanecer en Machu Picchu" class="bento-img" loading="lazy" />
+          <div class="bento-overlay">
+            <span class="bento-category"><i class="fa-solid fa-sun"></i> Amanecer Místico</span>
+            <h3 class="bento-title">La Ciudadela al Despertar</h3>
+            <p class="bento-desc">Las primeras horas de luz sobre el Huayna Picchu con el silencio sagrado de los incas.</p>
+          </div>
+        </div>
+
+        <!-- Item 2: Foto Real - Medicina Ancestral & Mamita Sabia -->
+        <div class="bento-item bento-col-4">
+          <img src="/images/medicina-ancestral-mamita.jpg" alt="Medicina Ancestral y Sabiduría Andina en Cusco" class="bento-img" loading="lazy" />
+          <div class="bento-overlay">
+            <span class="bento-category"><i class="fa-solid fa-leaf"></i> Hanpi: Sanación Sagrada</span>
+            <h3 class="bento-title">Sabiduría Ancestral</h3>
+            <p class="bento-desc">Plantas maestras, gratitud a la Pachamama y ceremonias tradicionales guiadas por abuelas sabias.</p>
+          </div>
+        </div>
+
+        <!-- Item 3: Foto Real - Comunidad Andina y Niño con Poncho -->
+        <div class="bento-item bento-col-4-sm">
+          <img src="/images/comunidad-nino-andes.jpg" alt="Turismo vivencial y hospitalidad andina" class="bento-img" loading="lazy" />
+          <div class="bento-overlay">
+            <span class="bento-category"><i class="fa-solid fa-mug-hot"></i> Hospitalidad Pura</span>
+            <h3 class="bento-title">Turismo Comunitario</h3>
+            <p class="bento-desc">Compartiendo en reciprocidad sincera con las familias de las altas comunidades andinas.</p>
+          </div>
+        </div>
+
+        <!-- Item 4: Montaña 7 Colores -->
+        <div class="bento-item bento-col-8-sm">
+          <img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&w=1000&q=80" alt="Montaña de siete colores Vinicunca" class="bento-img" loading="lazy" />
+          <div class="bento-overlay">
+            <span class="bento-category"><i class="fa-solid fa-rainbow"></i> Cordillera Vilcanota</span>
+            <h3 class="bento-title">Vinicunca & Mirador del Valle Rojo</h3>
+            <p class="bento-desc">Estratigrafía mineral única en el mundo combinada con la pureza y energía del aire andino.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal / Drawer Interactivo de Pre-Reserva (Preparado para Culqi) -->
+  <div class="booking-modal-backdrop" id="booking-modal-backdrop" aria-hidden="true">
+    <div class="booking-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <!-- Encabezado del Drawer -->
+      <div class="drawer-header">
+        <h3 id="drawer-title">
+          <i class="fa-solid fa-shield-heart"></i>
+          Reservar Experiencia
+        </h3>
+        <button class="drawer-close-btn" aria-label="Cerrar ventana de reserva">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Contenido del Formulario de Reserva -->
+      <div class="drawer-content">
+        <!-- Banner del Tour Seleccionado -->
+        <div class="selected-tour-banner">
+          <img src="" alt="" class="selected-tour-thumbnail" />
+          <div class="selected-tour-info">
+            <h4 class="selected-tour-title">Cargando experiencia...</h4>
+            <span class="selected-tour-meta"></span>
+          </div>
+        </div>
+
+        <!-- Fecha de Salida (Flatpickr) -->
+        <div class="form-group">
+          <label for="booking-date" class="form-label">
+            <i class="fa-solid fa-calendar-days"></i> Fecha tentativa de viaje
+          </label>
+          <input 
+            type="text" 
+            id="booking-date" 
+            class="form-input" 
+            placeholder="Selecciona tu fecha de salida" 
+            readonly 
+          />
+        </div>
+
+        <!-- Contador de Pasajeros -->
+        <div class="form-group">
+          <label class="form-label">
+            <i class="fa-solid fa-users"></i> Número de Pasajeros
+          </label>
+          
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <!-- Adultos -->
+            <div class="pax-counter-row" data-counter-type="adults">
+              <div class="pax-info">
+                <span class="pax-title">Adultos</span>
+                <span class="pax-desc">Mayores de 18 años</span>
+              </div>
+              <div class="counter-controls">
+                <button type="button" class="btn-counter btn-counter-minus" aria-label="Restar adulto">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <span class="counter-value">2</span>
+                <button type="button" class="btn-counter btn-counter-plus" aria-label="Sumar adulto">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Niños -->
+            <div class="pax-counter-row" data-counter-type="children">
+              <div class="pax-info">
+                <span class="pax-title">Menores / Niños</span>
+                <span class="pax-desc">3 a 17 años (30% descuento)</span>
+              </div>
+              <div class="counter-controls">
+                <button type="button" class="btn-counter btn-counter-minus" aria-label="Restar niño">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <span class="counter-value">0</span>
+                <button type="button" class="btn-counter btn-counter-plus" aria-label="Sumar niño">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adicionales y Mejoras Opcionales -->
+        <div class="form-group">
+          <label class="form-label">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Servicios Opcionales
+          </label>
+          <div id="booking-extras-container" style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <!-- Renderizado dinámico según el tour -->
+          </div>
+        </div>
+
+        <!-- Datos del Titular -->
+        <div class="form-group">
+          <label for="booking-name" class="form-label">
+            <i class="fa-solid fa-id-card"></i> Nombre completo del titular
+          </label>
+          <input 
+            type="text" 
+            id="booking-name" 
+            class="form-input" 
+            placeholder="Ej. Carlos Mendoza" 
+          />
+        </div>
+
+        <!-- Desglose de Precios en Vivo -->
+        <div class="price-breakdown-card">
+          <div class="breakdown-row" id="summary-adults-row">
+            <span>2x Adultos</span>
+            <span>$570</span>
+          </div>
+          <div class="breakdown-row" id="summary-children-row" style="display: none;">
+            <span>0x Menores</span>
+            <span>$0</span>
+          </div>
+          <div class="breakdown-row" id="summary-extras-row" style="display: none;">
+            <span>Adicionales</span>
+            <span>$0</span>
+          </div>
+          <div class="breakdown-total">
+            <span>Total Estimado:</span>
+            <span id="summary-grand-total">$570 <small>USD</small></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer con Atención Directa por WhatsApp -->
+      <div class="drawer-footer">
+        <button class="btn btn-whatsapp-quote" id="btn-whatsapp-quote" style="padding: 1rem; font-size: 1rem;">
+          <i class="fa-brands fa-whatsapp" style="font-size: 1.35rem;"></i>
+          <span>Confirmar Reserva por WhatsApp</span>
+        </button>
+
+        <div class="secure-payment-notice">
+          <i class="fa-solid fa-headset"></i>
+          <span>Atención personalizada inmediata por un asesor oficial en Cusco</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón Flotante de WhatsApp con Pulso Radar -->
+  <a 
+    href="https://wa.me/51984000000?text=Hola%20Hanpinahuasi%20Travel,%20quisiera%20cotizar%20un%20viaje%20a%20Cusco" 
+    class="whatsapp-floating" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    aria-label="Contactar a Hanpinahuasi Travel por WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>¿Dudas? Chatea aquí</span>
+  </a>
+
+  <!-- Footer Formal y Acreditaciones -->
+  <footer id="contacto">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <img src="/images/logo-hanpinahuasi.png" alt="Hanpinahuasi Travel Logo" style="width: 48px; height: 48px; border-radius: 50%; background: #FAF7F0; padding: 2px; border: 1px solid var(--color-gold);" />
+            <h4 style="margin-bottom: 0;">Hanpinahuasi <span>Travel</span></h4>
+          </div>
+          <p>
+            Operador formal cusqueño dedicado a la sanación ancestral, turismo comunitario consciente y expediciones a Machu Picchu con la calidez del hogar andino.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/hanpinahuasicusco/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram de Hanpinahuasi Travel"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/hanpinahuasicusco?locale=es_LA" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook de Hanpinahuasi Travel"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-heading">Experiencias</h5>
+          <ul class="footer-links-list">
+            <li><a href="#tours">Machu Picchu Clásico</a></li>
+            <li><a href="#tours">Valle Sagrado & Salineras</a></li>
+            <li><a href="#tours">Laguna Humantay Anti-Estrés</a></li>
+            <li><a href="#tours">Montaña 7 Colores & Valle Rojo</a></li>
+            <li><a href="#tours">Waqrapukara Fortaleza Inca</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-heading">Formalidad & Legal</h5>
+          <ul class="footer-links-list">
+            <li>RUC: 20608912345</li>
+            <li>Razón Social: Hanpinahuasi Travel E.I.R.L.</li>
+            <li>DIRCETUR Reg. Nº: 4821-2024</li>
+            <li><a href="#"><i class="fa-solid fa-book-open"></i> Libro de Reclamaciones</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-heading">Contacto Cusco</h5>
+          <ul class="footer-links-list">
+            <li><i class="fa-solid fa-location-dot"></i> <span>Calle Plateros 312, Centro Histórico, Cusco</span></li>
+            <li><i class="fa-solid fa-phone"></i> <span>+51 984 000 000</span></li>
+            <li><i class="fa-regular fa-envelope"></i> <span>reservas@hanpinahuasitravel.com</span></li>
+            <li><i class="fa-solid fa-clock"></i> <span>Lun - Dom: 06:00 - 21:00</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 Hanpinahuasi Travel. Todos los derechos reservados.</p>
+        <div class="footer-badges-strip">
+          <span class="footer-badge-item"><i class="fa-solid fa-shield-halved"></i> Pasarela Segura Culqi</span>
+          <span class="footer-badge-item"><i class="fa-solid fa-award"></i> DIRCETUR Cusco</span>
+          <span class="footer-badge-item"><i class="fa-solid fa-feather-pointed"></i> Turismo Sostenible & Ayni</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Exponer función global para abrir el modal desde botones HTML -->
+  <script type="module">
+    import { openBookingDrawer } from "/src/js/modules/booking-engine.js";
+    window.openBookingDrawer = openBookingDrawer;
+  </script>
+</body>
+</html>

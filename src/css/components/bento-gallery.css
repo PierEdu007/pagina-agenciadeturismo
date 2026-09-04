@@ -1,0 +1,113 @@
+/* Bento Grid de Experiencias y Cultura Andina */
+.bento-section {
+  padding: 6rem 0;
+  background-color: #FFFFFF;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 240px;
+  gap: 1.5rem;
+}
+
+.bento-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  cursor: pointer;
+}
+
+.bento-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.bento-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.bento-item:hover .bento-img {
+  transform: scale(1.06);
+}
+
+.bento-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(15, 20, 18, 0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.75rem;
+  color: #FFFFFF;
+  z-index: 2;
+}
+
+.bento-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-gold);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.bento-title {
+  color: #FFFFFF;
+  font-size: 1.35rem;
+  font-family: var(--font-display);
+  margin-bottom: 0.4rem;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.5px;
+}
+
+.bento-desc {
+  font-size: 0.85rem;
+  color: #DDE5E1;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* Distribución Asimétrica Bento */
+.bento-col-8 {
+  grid-column: span 8;
+  grid-row: span 2;
+}
+
+.bento-col-4 {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+
+.bento-col-4-sm {
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+.bento-col-8-sm {
+  grid-column: span 8;
+  grid-row: span 1;
+}
+
+@media (max-width: 960px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 280px;
+  }
+
+  .bento-col-8,
+  .bento-col-4,
+  .bento-col-4-sm,
+  .bento-col-8-sm {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}

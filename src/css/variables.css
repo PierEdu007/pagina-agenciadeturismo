@@ -1,0 +1,54 @@
+:root {
+  /* Paleta Andina Premium */
+  --color-terracotta: #C85A32;
+  --color-terracotta-hover: #AF4B26;
+  --color-terracotta-subtle: rgba(200, 90, 50, 0.12);
+  
+  --color-gold: #D4A373;
+  --color-gold-light: #E8C8A6;
+  --color-gold-glow: rgba(212, 163, 115, 0.25);
+  
+  --color-green-andes: #204135;
+  --color-green-deep: #132720;
+  --color-green-accent: #2E5C4B;
+  
+  --color-cream-bg: #FAF8F4;
+  --color-cream-card: #FFFFFF;
+  --color-cream-subtle: #F3EFE8;
+  
+  --color-dark-bg: #0F1412;
+  --color-dark-surface: #171E1B;
+  --color-dark-border: rgba(255, 255, 255, 0.1);
+  
+  --color-text-main: #18201D;
+  --color-text-muted: #56645F;
+  --color-text-light: #EBF1EE;
+  --color-text-dim: #94A29D;
+  
+  --border-light: #E8E4DA;
+  --border-focus: #C85A32;
+  
+  /* Sombras y Elevaciones */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.10);
+  --shadow-hover: 0 20px 48px rgba(200, 90, 50, 0.14);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+  
+  /* Tipografía */
+  --font-display: 'Uncial Antiqua', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Curvas y Bordes */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+  --radius-arch: 120px 120px 12px 12px;
+  
+  /* Transiciones */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
