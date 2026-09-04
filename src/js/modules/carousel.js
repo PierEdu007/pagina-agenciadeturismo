@@ -18,7 +18,13 @@ export function initCarousel() {
     spaceBetween: 16,
     centeredSlides: false,
     grabCursor: true,
-    speed: 600,
+    speed: 750,
+    loop: true,
+    autoplay: {
+      delay: 3800,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
     pagination: {
       el: ".swiper-pagination-tours",
       clickable: true,

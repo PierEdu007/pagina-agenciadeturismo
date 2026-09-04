@@ -46,22 +46,25 @@
   filter: saturate(1.1);
 }
 
-/* Badges sobre la imagen */
+/* Badges sobre la imagen - Centrado en la cúspide del arco para evitar recortes */
 .tour-tag-badge {
   position: absolute;
   top: 1rem;
-  left: 1rem;
-  background: rgba(15, 20, 18, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 20, 18, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: #FFFFFF;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 0.35rem 0.9rem;
+  padding: 0.35rem 0.95rem;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
   z-index: 2;
 }
 
@@ -195,7 +198,8 @@
 }
 
 .price-amount {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 1.55rem;
   color: var(--color-text-main);
   line-height: 1.1;
