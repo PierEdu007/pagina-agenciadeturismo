@@ -108,7 +108,7 @@ export const TOURS_DATA = [
     maxGroup: 8,
     priceUSD: 30,
     pricePEN: 110,
-    image: "https://images.unsplash.com/photo-1509299349698-dd22323b5963?auto=format&fit=crop&w=800&q=80",
+    image: "/images/cusco-plaza-de-armas.jpg",
     summary: "Descubre Qorikancha, la imponente fortaleza megalítica de Sacsayhuamán, Q'enqo y Tambomachay en un recorrido exclusivo sin prisas.",
     inclusions: [
       "Transporte privado exclusivo",

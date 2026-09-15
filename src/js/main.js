@@ -15,6 +15,7 @@ import "../css/components/carousel.css";
 import "../css/components/bento-gallery.css";
 import "../css/components/booking-modal.css";
 import "../css/components/footer.css";
+import "../css/components/ong.css";
 
 // Módulos de Lógica
 import { initCurrency } from "./modules/currency.js";
