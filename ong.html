@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ONG Hanpinahuasi | Asociación Civil y Proyectos Comunitarios en Cusco</title>
+  <meta name="description" content="Sub-página de la Asociación Civil Hanpinahuasi. Preservación cultural con la Nación Q'ero, reforestación andina y turismo con reciprocidad sagrada (Ayni)." />
+  <meta name="theme-color" content="#0F1412" />
+  <link rel="icon" type="image/png" href="/images/logo-hanpinahuasi.png" />
+
+  <!-- Tipografías de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Uncial+Antiqua&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 Iconos Vectoriales Optimizados -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Prevenir FOUC y transiciones fantasma durante la carga inicial -->
+  <style>
+    body { opacity: 0; }
+    .preload, .preload * { transition: none !important; -webkit-transition: none !important; }
+  </style>
+
+  <!-- Script Principal de Vite (Importa CSS y JS Modular) -->
+  <script type="module" src="/src/js/main.js"></script>
+</head>
+<body class="preload">
+
+  <!-- Barra de Navegación Flotante con Glassmorphism -->
+  <header class="header-wrapper">
+    <nav class="navbar">
+      <a href="/" class="logo" title="Hanpinahuasi Cusco">
+        <img src="/images/logo-hanpinahuasi.png" alt="Hanpinahuasi Logo Oficial" class="logo-img" />
+        Hanpinahuasi <span>ONG</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="/#tours" class="nav-link">Experiencias</a></li>
+        <li><a href="/#por-que-hanpinahuasi" class="nav-link">Por qué Hanpinahuasi</a></li>
+        <li><a href="/#galeria" class="nav-link">Galería</a></li>
+        <li><a href="/ong.html" class="nav-link active">ONG</a></li>
+        <li><a href="/#contacto" class="nav-link">Contacto</a></li>
+        <li class="mobile-nav-cta" style="display: none;">
+          <a href="/#tours" class="btn btn-primary" style="width: 100%; display: inline-flex; justify-content: center; align-items: center; text-decoration: none;">
+            <i class="fa-solid fa-compass"></i> Ver Experiencias
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Selector de Moneda Interactivo -->
+        <div class="currency-toggle" title="Cambiar divisa de tarifas">
+          <button class="currency-btn active" data-currency="USD">USD $</button>
+          <button class="currency-btn" data-currency="PEN">PEN S/</button>
+        </div>
+
+        <a href="/" class="btn btn-primary btn-sm" title="Volver a la Agencia">
+          <i class="fa-solid fa-arrow-left"></i> <span class="btn-text-nav">Agencia</span>
+        </a>
+
+        <button class="mobile-toggle" aria-label="Abrir menú de navegación">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Overlay para menú móvil -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- Hero de la Sub-Página ONG (Plantilla) -->
+  <section class="ong-hero">
+    <img src="/images/comunidad-nino-andes.jpg" alt="Comunidades Andinas y Sabiduría de los Andes" class="ong-hero-bg" />
+    <div class="ong-hero-overlay"></div>
+
+    <div class="ong-hero-content">
+      <div class="template-pill">
+        <i class="fa-solid fa-feather-pointed"></i> Plantilla • Asociación Civil Hanpinahuasi
+      </div>
+
+      <h1 class="ong-title">
+        Sembrando Sabiduría Andina, <span>Sanación y Ayni</span>
+      </h1>
+
+      <p class="ong-subtitle">
+        Iniciativa comunitaria y sin fines de lucro vinculada a la Nación Q'ero y comunidades de los Andes cusqueños. Trabajamos por el rescate de la medicina ancestral, la reforestación de queñuales nativos y la reciprocidad sagrada con la Pachamama.
+      </p>
+
+      <div class="ong-hero-actions">
+        <a href="#proyectos" class="btn btn-primary shimmer-effect">
+          <i class="fa-solid fa-seedling"></i> Explorar Proyectos
+        </a>
+        <a href="#participar" class="btn btn-outline">
+          <i class="fa-solid fa-hand-holding-heart"></i> Cómo Colaborar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Métricas de Impacto Comunitario (Plantilla Editable) -->
+  <section class="container ong-stats-section">
+    <div class="ong-stats-grid">
+      <div class="ong-stat-card">
+        <div class="ong-stat-number">+5</div>
+        <div class="ong-stat-label">Comunidades Q'ero y Altoandinas Beneficiadas</div>
+      </div>
+      <div class="ong-stat-card">
+        <div class="ong-stat-number">12,500+</div>
+        <div class="ong-stat-label">Árboles Nativos (Queñuales) Reforestados</div>
+      </div>
+      <div class="ong-stat-card">
+        <div class="ong-stat-number">100%</div>
+        <div class="ong-stat-label">Retribución Directa Bajo el Principio del Ayni</div>
+      </div>
+      <div class="ong-stat-card">
+        <div class="ong-stat-number">+15</div>
+        <div class="ong-stat-label">Años Preservando Tradiciones y Sabiduría Viva</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión, Visión y Principios (Plantilla) -->
+  <section class="container" style="padding-top: 1rem; padding-bottom: 4rem;">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-tag">
+        <i class="fa-solid fa-compass"></i> Filosofía & Propósito
+      </span>
+      <h2>Nuestra Razón de Ser</h2>
+      <p>Un espacio de encuentro donde el conocimiento milenario andino convive con el compromiso social y ecológico.</p>
+    </div>
+
+    <div class="ong-mission-grid reveal-on-scroll">
+      <div class="ong-mission-card">
+        <div class="ong-card-icon icon-terracotta">
+          <i class="fa-solid fa-bullseye"></i>
+        </div>
+        <h3>Nuestra Misión</h3>
+        <p>
+          Preservar y difundir el patrimonio espiritual, médico y cultural de los linajes de sanadores andinos (Pampamisayoc y Ñustas), asegurando que las comunidades originarias reciban apoyo integral en salud, educación y autonomía comunitaria.
+        </p>
+      </div>
+
+      <div class="ong-mission-card">
+        <div class="ong-card-icon icon-green">
+          <i class="fa-solid fa-eye"></i>
+        </div>
+        <h3>Nuestra Visión</h3>
+        <p>
+          Consolidar un referente andino e internacional de turismo regenerativo y desarrollo sustentable, donde el viajero y la comunidad se reconozcan como parte de un mismo tejido vivo guiado por la armonía con la Pachamama.
+        </p>
+      </div>
+
+      <div class="ong-mission-card">
+        <div class="ong-card-icon icon-gold">
+          <i class="fa-solid fa-hands-holding-circle"></i>
+        </div>
+        <h3>El Valor del Ayni</h3>
+        <p>
+          <em>"Hoy por ti, mañana por mí"</em>. No concebimos el progreso sin reciprocidad. Cada expedición realizada con Hanpinahuasi Travel destina un porcentaje directo a los programas de conservación y bienestar de la ONG.
+        </p>
+      </div>
+    </div>
+
+    <!-- Proyectos Activos (Plantilla de Tarjetas) -->
+    <div class="section-header reveal-on-scroll" id="proyectos">
+      <span class="section-tag">
+        <i class="fa-solid fa-mountain-sun"></i> Programas Sociales
+      </span>
+      <h2>Proyectos en Desarrollo</h2>
+      <p>Iniciativas comunitarias que puedes conocer, apoyar o acompañar en tu paso por el Cusco.</p>
+    </div>
+
+    <div class="ong-pillars-grid reveal-on-scroll">
+      <!-- Proyecto 1: Sabiduría Q'ero -->
+      <article class="ong-pillar-card">
+        <div class="ong-pillar-media">
+          <img src="/images/medicina-ancestral-mamita.jpg" alt="Sabiduría Ancestral y Medicina Andina" loading="lazy" />
+          <span class="ong-pillar-tag"><i class="fa-solid fa-leaf"></i> Cultura Viva</span>
+        </div>
+        <div class="ong-pillar-body">
+          <h4>Medicina Ancestral & Q'eros</h4>
+          <p>
+            Documentación y resguardo de las ceremonias de sanación tradicional, pagos a la tierra y conocimientos botánicos guiados por abuelas sabias y sacerdotes andinos.
+          </p>
+          <ul class="ong-pillar-bullet">
+            <li><i class="fa-solid fa-circle-check"></i> Círculos de transmisión intergeneracional</li>
+            <li><i class="fa-solid fa-circle-check"></i> Resguardo de plantas maestras locales</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Proyecto 2: Reforestación -->
+      <article class="ong-pillar-card">
+        <div class="ong-pillar-media">
+          <img src="/images/cusco-plaza-de-armas.jpg" alt="Reforestación de queñuales en las cuencas del Cusco" loading="lazy" />
+          <span class="ong-pillar-tag"><i class="fa-solid fa-tree"></i> Ecología Andina</span>
+        </div>
+        <div class="ong-pillar-body">
+          <h4>Siembra de Bosques de Queñual</h4>
+          <p>
+            Reforestación con árboles autóctonos <em>Polylepis</em> (queñua) en las cabeceras de cuenca para proteger los acuíferos naturales y mitigar el cambio climático en los Andes.
+          </p>
+          <ul class="ong-pillar-bullet">
+            <li><i class="fa-solid fa-circle-check"></i> Viveros gestionados por familias locales</li>
+            <li><i class="fa-solid fa-circle-check"></i> Jornadas comunitarias de siembra anual</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Proyecto 3: Niñez y Comunidades -->
+      <article class="ong-pillar-card">
+        <div class="ong-pillar-media">
+          <img src="/images/comunidad-nino-andes.jpg" alt="Niñez y Familias de Comunidades Altoandinas" loading="lazy" />
+          <span class="ong-pillar-tag"><i class="fa-solid fa-heart"></i> Niñez Andina</span>
+        </div>
+        <div class="ong-pillar-body">
+          <h4>Abrigo y Nutrición Comunitaria</h4>
+          <p>
+            Apoyo logístico y sanitario a familias que habitan por encima de los 4,000 msnm durante las épocas de heladas extremas, promoviendo soberanía alimentaria y educación intercultural.
+          </p>
+          <ul class="ong-pillar-bullet">
+            <li><i class="fa-solid fa-circle-check"></i> Entrega de ropa térmica y abrigo andino</li>
+            <li><i class="fa-solid fa-circle-check"></i> Talleres de tejido y textilería tradicional</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <!-- Cita de Sabiduría Ancestral -->
+    <div class="ong-quote-banner reveal-on-scroll">
+      <p class="ong-quote-text">
+        "En los Andes no existe el ser humano separado de la montaña, del viento o del agua. Quien cuida a su comunidad y honra a la Pachamama, encuentra en ella su propio camino de sanación."
+      </p>
+      <div class="ong-quote-author">— Principio del Sumaq Kawsay (Buen Vivir Andino)</div>
+    </div>
+
+    <!-- Bloque de Participación / Colaboración (Plantilla Editable) -->
+    <div class="ong-cta-box reveal-on-scroll" id="participar">
+      <div class="template-pill" style="margin-bottom: 1rem;">
+        <i class="fa-solid fa-pen-to-square"></i> Sección de Llamado a la Acción (Personalizable)
+      </div>
+      <h3>¿Cómo Sumarte a Nuestra Causa?</h3>
+      <p>
+        Puedes colaborar mediante voluntariado profesional, apadrinamiento de queñuales nativos, donaciones directas o simplemente participando en las experiencias conscientes de nuestra agencia de viajes.
+      </p>
+      <div class="ong-cta-actions">
+        <a href="https://wa.me/51983878473?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20proyectos%20y%20voluntariado%20de%20la%20ONG%20Hanpinahuasi" target="_blank" rel="noopener noreferrer" class="btn btn-primary shimmer-effect">
+          <i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp
+        </a>
+        <a href="mailto:ong@hanpinahuasitravel.com" class="btn btn-outline">
+          <i class="fa-regular fa-envelope"></i> Enviar un Correo
+        </a>
+        <a href="/" class="btn btn-outline">
+          <i class="fa-solid fa-arrow-left"></i> Volver a Tours
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Formal y Acreditaciones -->
+  <footer id="contacto">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <img src="/images/logo-hanpinahuasi.png" alt="Hanpinahuasi Travel Logo" style="width: 48px; height: 48px; border-radius: 50%; background: #FAF7F0; padding: 2px; border: 1px solid var(--color-gold);" />
+            <h4 style="margin-bottom: 0;">Hanpinahuasi <span>ONG & Travel</span></h4>
+          </div>
+          <p>
+            Alianza civil sin fines de lucro y operador de turismo comunitario consciente en Cusco. Uniendo raíces milenarias con impacto social tangible.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/hanpinahuasicusco/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram de Hanpinahuasi"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/hanpinahuasicusco?locale=es_LA" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook de Hanpinahuasi"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-heading">Navegación</h5>
+          <ul class="footer-links-list">
+            <li><a href="/#tours">Experiencias Populares</a></li>
+            <li><a href="/#por-que-hanpinahuasi">Filosofía Hanpinahuasi</a></li>
+            <li><a href="/#galeria">Galería Andina</a></li>
+            <li><a href="/ong.html">Proyectos de la ONG</a></li>
+            <li><a href="/#contacto">Contacto Directo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-heading">Formalidad & Legal</h5>
+          <ul class="footer-links-list">
+            <li>Asociación Civil Sin Fines de Lucro</li>
+            <li>RUC: 20608912345</li>
+            <li>Convenio Comunidad Q'ero</li>
+            <li><a href="/ong.html"><i class="fa-solid fa-hands-holding-heart"></i> Memoria de Impacto</a></li>
+            <li><a href="#">Transparencia & Donaciones</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-heading">Sede Cusco</h5>
+          <ul class="footer-links-list">
+            <li><i class="fa-solid fa-location-dot"></i> <span>Calle Plateros 312, Centro Histórico, Cusco</span></li>
+            <li><i class="fa-solid fa-phone"></i> <span>+51 984 000 000</span></li>
+            <li><i class="fa-regular fa-envelope"></i> <span>ong@hanpinahuasitravel.com</span></li>
+            <li><i class="fa-solid fa-clock"></i> <span>Lun - Vie: 09:00 - 18:00</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 Asociación Civil Hanpinahuasi Cusco. Todos los derechos reservados. | <a href="https://wa.me/51983878473" target="_blank" rel="noopener noreferrer" style="color: var(--color-gold); text-decoration: none; font-weight: 600;">Hecho por PAMCo</a></p>
+        <div class="footer-badges-strip">
+          <span class="footer-badge-item"><i class="fa-solid fa-heart"></i> Impacto Social</span>
+          <span class="footer-badge-item"><i class="fa-solid fa-tree"></i> Reforestación</span>
+          <span class="footer-badge-item"><i class="fa-solid fa-feather-pointed"></i> Principio del Ayni</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
