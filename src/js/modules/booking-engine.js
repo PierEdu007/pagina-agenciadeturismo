@@ -311,6 +311,6 @@ function handleWhatsAppQuote() {
     `Quedo atento a la disponibilidad y link de pago Culqi.`
   ].join("\n");
 
-  const whatsappUrl = `https://wa.me/51984000000?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/51954103786?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, "_blank");
 }
