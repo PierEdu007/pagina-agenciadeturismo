@@ -28,7 +28,7 @@ export const TOURS_DATA = [
     maxGroup: 8,
     priceUSD: 295,
     pricePEN: 1120,
-    image: "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=700&q=75",
     summary: "Experiencia privada exclusiva a la ciudadela inca con tren panorámico, boleto oficial garantizado ante el Ministerio de Cultura y guía arqueológico de élite.",
     inclusions: [
       "Tren ida y vuelta desde Ollantaytambo",
@@ -54,7 +54,7 @@ export const TOURS_DATA = [
     maxGroup: 8,
     priceUSD: 48,
     pricePEN: 180,
-    image: "https://images.unsplash.com/photo-1589802829985-817e51171b92?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1589802829985-817e51171b92?auto=format&fit=crop&w=700&q=75",
     summary: "Recorrido por los templos y andenerías de Pisac, la fortaleza viva de Ollantaytambo y textilería en Chinchero con almuerzo buffet andino gourmet en Urubamba.",
     inclusions: [
       "Recojo y retorno en tu hotel en Cusco",
@@ -79,7 +79,7 @@ export const TOURS_DATA = [
     maxGroup: 8,
     priceUSD: 35,
     pricePEN: 130,
-    image: "https://images.unsplash.com/photo-1509299349698-dd22323b5963?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1509299349698-dd22323b5963?auto=format&fit=crop&w=700&q=75",
     summary: "Visita los milenarios pozos de sal rosada de Maras y el laboratorio agrícola concéntrico de Moray, maravillas de la arquitectura precolombina.",
     inclusions: [
       "Transporte turístico confortable ida y vuelta",
@@ -110,7 +110,7 @@ export const TOURS_DATA = [
     pricePEN: 60,
     pricePrivateUSD: 48,
     pricePrivatePEN: 180,
-    image: "/images/city-tour-cusco.jpg",
+    image: "/images/city-tour-cusco.webp",
     summary: "Partida a las 13:00 hrs desde la Plaza de Armas. Visita guiada a la Catedral de Cusco, Qoricancha, Sacsayhuamán, Qenqo, Puca Pucara y Tambomachay. Retorno al centro histórico a las 18:00 hrs.",
     places: [
       "Catedral de Cusco",
@@ -153,7 +153,7 @@ export const TOURS_DATA = [
     maxGroup: 8,
     priceUSD: 38,
     pricePEN: 140,
-    image: "https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?auto=format&fit=crop&w=700&q=75",
     summary: "Expedición a la laguna turquesa custodiada por el Apu Salkantay. Salida temprana para evitar multitudes, con bastones, desayuno andino y asistencia médica.",
     inclusions: [
       "Desayuno andino y almuerzo buffet en Mollepata",
@@ -178,7 +178,7 @@ export const TOURS_DATA = [
     maxGroup: 8,
     priceUSD: 40,
     pricePEN: 150,
-    image: "https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&w=700&q=75",
     summary: "Admira la estratigrafía mineral de Vinicunca y el espectacular mirador del Valle Rojo con un ritmo de caminata seguro, oxígeno y grupos reducidos.",
     inclusions: [
       "Desayuno buffet energético y almuerzo caliente",
@@ -203,7 +203,7 @@ export const TOURS_DATA = [
     maxGroup: 8,
     priceUSD: 45,
     pricePEN: 170,
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=75",
     summary: "Conduce cuatrimotos ATV por senderos de tierra andinos entre Maras, Moray y la mística Laguna de Huaypo con vistas panorámicas a los picos nevados.",
     inclusions: [
       "Cuatrimoto individual o doble con casco y equipo de seguridad",
@@ -228,7 +228,7 @@ export const TOURS_DATA = [
     maxGroup: 6,
     priceUSD: 55,
     pricePEN: 205,
-    image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=700&q=75",
     summary: "Paseo a caballo criollo o de paso por los caminos ancestrales de Sacsayhuamán, el Templo de la Luna y bosques andinos, en conexión profunda con la naturaleza.",
     inclusions: [
       "Caballos andinos mansos y equipamiento completo de montar",
@@ -253,7 +253,7 @@ export const TOURS_DATA = [
     maxGroup: 6,
     priceUSD: 65,
     pricePEN: 245,
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=75",
     summary: "Almuerzo al aire libre montado con alfombras y cojines andinos frente a lagunas sagradas o miradores del Valle Sagrado. Gastronomía orgánica de altura y vino de cortesía.",
     inclusions: [
       "Montaje bohemio andino privado (alfombras, mesas bajas, vajilla fina)",
@@ -282,7 +282,7 @@ export const TOURS_DATA = [
     maxGroup: 4,
     priceUSD: 45,
     pricePEN: 170,
-    image: "/images/medicina-ancestral-mamita.jpg",
+    image: "/images/medicina-ancestral-mamita.webp",
     summary: "Consulta ceremonial con las hojas sagradas de coca guiada por un maestro andino (Pampamisayoc). Espacio de orientación, introspección personal y respeto por la tradición inca.",
     inclusions: [
       "Sesión privada con maestro o abuela sabia andina",
@@ -307,7 +307,7 @@ export const TOURS_DATA = [
     maxGroup: 6,
     priceUSD: 75,
     pricePEN: 280,
-    image: "/images/comunidad-nino-andes.jpg",
+    image: "/images/comunidad-nino-andes.webp",
     summary: "Ofrenda tradicional andina (Haywarikuy) en agradecimiento a la Madre Tierra y los Apus tutelares. Conecta con el principio de reciprocidad sagrada (Ayni) de los incas.",
     inclusions: [
       "Ceremonia completa guiada por sacerdote andino tradicional",
@@ -332,7 +332,7 @@ export const TOURS_DATA = [
     maxGroup: 6,
     priceUSD: 60,
     pricePEN: 225,
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=75",
     summary: "Ceremonia de alineación energética y meditación andina que armoniza mente, cuerpo y espíritu mediante sonidos de caracolas (pututu), campanas y cantos quechuas.",
     inclusions: [
       "Sesión guiada de meditación y respiración consciente andina",
@@ -357,7 +357,7 @@ export const TOURS_DATA = [
     maxGroup: 4,
     priceUSD: 50,
     pricePEN: 190,
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=700&q=75",
     summary: "Limpieza profunda con sahumado tradicional de copal, ruda, palo santo, flores andinas y plumas de aves sagradas para liberar tensiones y renovar la vitalidad.",
     inclusions: [
       "Sahumado con hierbas maestras aromáticas del Cusco",
@@ -382,7 +382,7 @@ export const TOURS_DATA = [
     maxGroup: 4,
     priceUSD: 65,
     pricePEN: 245,
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=75",
     summary: "Milenario ritual andino 'Cuti' de corte y retorno de energías densas. Restablece la protección áurica y la paz interior según las enseñanzas transmitidas de los sacerdotes Q'ero.",
     inclusions: [
       "Ceremonia especializada de corte con espinas de cactus y lanas sagradas",

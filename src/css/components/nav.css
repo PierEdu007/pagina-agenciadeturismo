@@ -145,19 +145,31 @@ body.nav-open .navbar {
 .currency-btn {
   background: transparent;
   border: none;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 0.25rem 0.6rem;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0.25rem 0.65rem;
   border-radius: var(--radius-pill);
   font-size: 0.75rem;
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.currency-btn:hover:not(.active) {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.05);
 }
 
 .currency-btn.active {
   background-color: var(--color-gold);
   color: var(--color-text-main);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transform: scale(1.02);
+}
+
+.currency-btn:active {
+  transform: scale(0.94);
 }
 
 /* ======================================

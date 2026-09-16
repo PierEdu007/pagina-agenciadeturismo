@@ -39,13 +39,19 @@
   cursor: pointer;
   transition: all var(--transition-fast);
   box-shadow: var(--shadow-sm);
+  -webkit-tap-highlight-color: transparent;
 }
 
-.carousel-nav-btn:hover {
+.carousel-nav-btn:hover:not(:disabled) {
   background: var(--color-terracotta);
   color: #FFFFFF;
   border-color: var(--color-terracotta);
-  transform: scale(1.06);
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 6px 18px rgba(200, 90, 50, 0.35);
+}
+
+.carousel-nav-btn:active:not(:disabled) {
+  transform: translateY(0) scale(0.94);
 }
 
 .carousel-nav-btn:disabled,
@@ -71,6 +77,11 @@
   border-radius: var(--radius-pill);
   transition: all var(--transition-fast);
   cursor: pointer;
+}
+
+.swiper-pagination-bullet:hover {
+  transform: scale(1.25);
+  background-color: var(--color-gold);
 }
 
 .swiper-pagination-bullet-active {
@@ -104,15 +115,17 @@
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
   box-shadow: var(--shadow-sm);
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.tour-filter-btn:hover {
+.tour-filter-btn:hover:not(.active) {
   border-color: var(--color-terracotta);
   color: var(--color-terracotta);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 14px rgba(200, 90, 50, 0.15);
 }
 
 .tour-filter-btn.active {
@@ -120,10 +133,26 @@
   color: #FFFFFF;
   border-color: var(--color-terracotta);
   box-shadow: 0 4px 14px rgba(200, 90, 50, 0.35);
+  transform: scale(1.02);
+}
+
+.tour-filter-btn.active:hover {
+  background: var(--color-terracotta-hover);
+  border-color: var(--color-terracotta-hover);
+  box-shadow: 0 6px 18px rgba(200, 90, 50, 0.45);
+}
+
+.tour-filter-btn:active {
+  transform: translateY(1px) scale(0.97);
 }
 
 .tour-filter-btn i {
   font-size: 0.95rem;
+  transition: transform var(--transition-fast);
+}
+
+.tour-filter-btn:hover i {
+  transform: scale(1.2) rotate(-5deg);
 }
 
 /* Pastilla de Categoría en la Tarjeta */

@@ -41,6 +41,9 @@ export function renderTours(category = "all") {
             alt="${tour.title} en Cusco Perú" 
             class="tour-card-img" 
             loading="lazy"
+            decoding="async"
+            width="600"
+            height="400"
           />
         </div>
         <div class="tour-body">

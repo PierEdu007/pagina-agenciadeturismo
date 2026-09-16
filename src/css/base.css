@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
-/* Sistema de Botones Premium */
+/* Sistema de Botones Premium con Micro-interacciones */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -111,26 +111,80 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: all var(--transition-fast);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
   position: relative;
   overflow: hidden;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+}
+
+/* Destello de luz sutil en hover (Micro-interacción de brillo) */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  transition: left 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.btn:hover::before {
+  left: 140%;
+}
+
+/* Micro-interacción en iconos de botones */
+.btn i {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover i.fa-arrow-right,
+.btn:hover i.fa-chevron-right,
+.btn:hover i.fa-arrow-up-right-from-square {
+  transform: translateX(4px);
+}
+
+.btn:hover i.fa-whatsapp {
+  transform: scale(1.15) rotate(6deg);
+}
+
+.btn:hover i.fa-calendar-check,
+.btn:hover i.fa-compass,
+.btn:hover i.fa-hands-holding-heart,
+.btn:hover i.fa-heart {
+  transform: scale(1.18) translateY(-1px);
+}
+
+.btn:hover i.fa-phone {
+  transform: rotate(12deg) scale(1.1);
+}
+
+/* Estado activo táctil universal */
+.btn:active {
+  transform: translateY(1px) scale(0.98) !important;
 }
 
 .btn-primary {
-  background-color: var(--color-terracotta);
+  background: linear-gradient(135deg, var(--color-terracotta) 0%, #D8633B 100%);
   color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(200, 90, 50, 0.3);
+  box-shadow: 0 4px 14px rgba(200, 90, 50, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-terracotta-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(200, 90, 50, 0.4);
-}
-
-.btn-primary:active {
-  transform: translateY(0);
+  background: linear-gradient(135deg, var(--color-terracotta-hover) 0%, #C2502A 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(200, 90, 50, 0.45), 0 0 16px rgba(212, 163, 115, 0.3);
+  color: #FFFFFF;
 }
 
 .btn-outline {
@@ -142,19 +196,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.6);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), inset 0 0 12px rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
 }
 
 .btn-secondary {
   background-color: var(--color-green-andes);
   color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(32, 65, 53, 0.3);
 }
 
 .btn-secondary:hover {
   background-color: var(--color-green-deep);
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(19, 39, 32, 0.45);
+  color: #FFFFFF;
 }
 
 .btn-sm {

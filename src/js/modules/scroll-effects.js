@@ -98,4 +98,27 @@ export function initScrollEffects() {
   } else {
     revealElements.forEach(el => el.classList.add("is-visible"));
   }
+
+  // Botón Volver Arriba (Scroll to Top)
+  const scrollTopBtn = document.getElementById("scroll-top-btn");
+  if (scrollTopBtn) {
+    const toggleScrollTopVisibility = () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add("is-visible");
+      } else {
+        scrollTopBtn.classList.remove("is-visible");
+      }
+    };
+
+    window.addEventListener("scroll", toggleScrollTopVisibility, { passive: true });
+    toggleScrollTopVisibility();
+
+    scrollTopBtn.addEventListener("click", () => {
+      if (lenis && typeof lenis.scrollTo === "function") {
+        lenis.scrollTo(0, { duration: 1.2 });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+  }
 }
