@@ -19,7 +19,7 @@ import "../css/components/ong.css";
 
 // Módulos de Lógica
 import { initCurrency } from "./modules/currency.js";
-import { renderTours } from "./modules/tour-renderer.js";
+import { renderTours, initTourTabs } from "./modules/tour-renderer.js";
 import { initCarousel } from "./modules/carousel.js";
 import { initScrollEffects } from "./modules/scroll-effects.js";
 import { initBookingEngine } from "./modules/booking-engine.js";
@@ -28,11 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Inicializar gestor de divisas (USD / PEN)
   initCurrency();
 
-  // Renderizar tarjetas de tour dinámicamente
-  renderTours();
-
-  // Inicializar carrusel táctil Swiper
-  initCarousel();
+  // Renderizar tarjetas de tour dinámicamente y activar pestañas
+  renderTours("all");
+  initTourTabs();
 
   // Inicializar motor de reserva y modal Culqi
   initBookingEngine();

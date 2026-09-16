@@ -1,5 +1,6 @@
 /**
- * Inicialización de Swiper Carousel
+ * Inicialización y Gestión del Swiper Carousel
+ * Hampinahuasi Travel S.A.C.
  */
 
 import Swiper from "swiper";
@@ -8,20 +9,33 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+let swiperInstance = null;
+
 export function initCarousel() {
   const swiperElement = document.querySelector(".swiper-container-tours");
-  if (!swiperElement) return;
+  if (!swiperElement) return null;
 
-  const swiper = new Swiper(swiperElement, {
+  if (swiperInstance) {
+    try {
+      swiperInstance.destroy(true, true);
+    } catch (e) {
+      console.warn("Error reiniciando Swiper:", e);
+    }
+  }
+
+  const slides = swiperElement.querySelectorAll(".swiper-slide");
+  const shouldLoop = slides.length >= 4;
+
+  swiperInstance = new Swiper(swiperElement, {
     modules: [Navigation, Pagination, Autoplay],
-    slidesPerView: 1.12,
+    slidesPerView: 1.15,
     spaceBetween: 16,
     centeredSlides: false,
     grabCursor: true,
-    speed: 750,
-    loop: true,
+    speed: 650,
+    loop: shouldLoop,
     autoplay: {
-      delay: 3800,
+      delay: 4200,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
@@ -44,10 +58,14 @@ export function initCarousel() {
       },
       1100: {
         slidesPerView: 3,
-        spaceBetween: 32,
+        spaceBetween: 30,
       },
     },
   });
 
-  return swiper;
+  return swiperInstance;
+}
+
+export function getSwiperInstance() {
+  return swiperInstance;
 }

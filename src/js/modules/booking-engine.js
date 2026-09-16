@@ -134,7 +134,16 @@ export function openBookingDrawer(tourId) {
 
   if (thumbnail) thumbnail.src = tour.image;
   if (title) title.textContent = tour.title;
-  if (meta) meta.innerHTML = `<i class="fa-solid fa-clock"></i> ${tour.duration} | <i class="fa-solid fa-mountain"></i> ${tour.difficulty}`;
+  if (meta) {
+    let metaHtml = `<i class="fa-solid fa-clock"></i> ${tour.duration} | <i class="fa-solid fa-mountain"></i> ${tour.difficulty}`;
+    if (tour.departureTime) {
+      metaHtml += `<br><small style="display:block; margin-top: 4px; color: var(--color-gold); font-size: 0.78rem;"><i class="fa-solid fa-location-dot"></i> Partida: ${tour.departureLocation} (${tour.departureTime}) · Retorno: ${tour.returnTime}</small>`;
+    }
+    if (tour.notes) {
+      metaHtml += `<small style="display:block; margin-top: 6px; color: rgba(255,255,255,0.8); font-size: 0.74rem; line-height: 1.4; border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 4px;"><i class="fa-solid fa-circle-info" style="color: var(--color-gold);"></i> <strong>Nota:</strong> ${tour.notes}</small>`;
+    }
+    meta.innerHTML = metaHtml;
+  }
 
   // Renderizar extras del tour
   renderTourExtras(tour);
@@ -301,16 +310,31 @@ function handleWhatsAppQuote() {
   const nameInput = document.getElementById("booking-name");
   const clientName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : "Viajero";
 
-  const message = [
+  const selectedExtras = Array.from(bookingState.extras)
+    .map(extraId => {
+      const ex = bookingState.tour.extras.find(e => e.id === extraId);
+      return ex ? `  • ${ex.name}` : null;
+    })
+    .filter(Boolean);
+
+  const lines = [
     `Hola Hanpinahuasi Travel, solicito confirmación de reserva formal:`,
     `*Tour:* ${bookingState.tour.title}`,
     `*Fecha Prevista:* ${bookingState.date || "Por definir"}`,
-    `*Pasajeros:* ${bookingState.adults} Adulto(s)${bookingState.children > 0 ? `, ${bookingState.children} Niño(s)` : ""}`,
+    `*Pasajeros:* ${bookingState.adults} Adulto(s)${bookingState.children > 0 ? `, ${bookingState.children} Niño(s)` : ""}`
+  ];
+
+  if (selectedExtras.length > 0) {
+    lines.push(`*Opciones / Adicionales:*\n${selectedExtras.join("\n")}`);
+  }
+
+  lines.push(
     `*Total Cotizado:* ${formatPrice(bookingState.calculatedTotal, bookingState.currency)} ${bookingState.currency}`,
     `*Nombre Titular:* ${clientName}`,
-    `Quedo atento a la disponibilidad y link de pago Culqi.`
-  ].join("\n");
+    `Quedo atento a la disponibilidad y confirmación.`
+  );
 
+  const message = lines.join("\n");
   const whatsappUrl = `https://wa.me/51954103786?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, "_blank");
 }
