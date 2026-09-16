@@ -7,22 +7,28 @@
 import "../css/variables.css";
 import "../css/base.css";
 import "../css/animations.css";
+import "../css/components/preloader.css";
 import "../css/components/nav.css";
 import "../css/components/hero.css";
 import "../css/components/trust-ticker.css";
 import "../css/components/cards.css";
 import "../css/components/carousel.css";
 import "../css/components/bento-gallery.css";
+import "../css/components/cta-banner.css";
 import "../css/components/booking-modal.css";
 import "../css/components/footer.css";
 import "../css/components/ong.css";
 
 // Módulos de Lógica
+import { initPreloader } from "./modules/preloader.js";
 import { initCurrency } from "./modules/currency.js";
 import { renderTours, initTourTabs } from "./modules/tour-renderer.js";
 import { initCarousel } from "./modules/carousel.js";
 import { initScrollEffects } from "./modules/scroll-effects.js";
 import { initBookingEngine } from "./modules/booking-engine.js";
+
+// Inicializar Preloader inmediatamente
+initPreloader();
 
 document.addEventListener("DOMContentLoaded", () => {
   // Inicializar gestor de divisas (USD / PEN)
@@ -37,11 +43,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Inicializar scroll suave y animaciones
   initScrollEffects();
-
-  // Quitar clase preload para activar transiciones solo después de la carga inicial
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      document.body.classList.remove("preload");
-    });
-  });
 });

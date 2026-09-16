@@ -71,7 +71,7 @@
   pointer-events: none;
 }
 
-/* Contenido Principal del Hero */
+/* Contenido Principal del Hero con Animaciones de Entrada */
 .hero-content {
   position: relative;
   z-index: 10;
@@ -99,6 +99,7 @@
   align-items: center;
   gap: 0.6rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: hero-fade-down 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 }
 
 .hero-badge i {
@@ -114,6 +115,7 @@
   margin-bottom: 1.5rem;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6);
   letter-spacing: 1px;
+  animation: hero-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
 }
 
 .hero-title span {
@@ -130,6 +132,7 @@
   font-weight: 400;
   line-height: 1.6;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  animation: hero-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
 }
 
 .hero-ctas {
@@ -138,6 +141,30 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 3.5rem;
+  animation: hero-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
+}
+
+/* Keyframes de Entrada del Hero */
+@keyframes hero-fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Indicador de Scroll */

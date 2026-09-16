@@ -116,7 +116,32 @@ export function renderTours(category = "all") {
 }
 
 /**
- * Inicializar botones de filtro por pestañas
+ * Renderizar placeholders de Skeleton Loader
+ */
+export function renderSkeletons(container, count = 3) {
+  if (!container) return;
+  container.innerHTML = "";
+  for (let i = 0; i < count; i++) {
+    const slide = document.createElement("div");
+    slide.className = "swiper-slide";
+    slide.innerHTML = `
+      <div class="tour-skeleton-card">
+        <div class="skeleton-media"></div>
+        <div class="skeleton-body">
+          <div class="skeleton-line short"></div>
+          <div class="skeleton-line title"></div>
+          <div class="skeleton-line desc"></div>
+          <div class="skeleton-line desc-sub"></div>
+          <div class="skeleton-line btn-shape"></div>
+        </div>
+      </div>
+    `;
+    container.appendChild(slide);
+  }
+}
+
+/**
+ * Inicializar botones de filtro por pestañas con transición Skeleton
  */
 export function initTourTabs() {
   const tabsContainer = document.getElementById("tours-filter-tabs");
@@ -124,10 +149,17 @@ export function initTourTabs() {
 
   tabsContainer.querySelectorAll(".tour-filter-btn").forEach(btn => {
     btn.addEventListener("click", () => {
+      if (btn.classList.contains("active")) return;
       tabsContainer.querySelectorAll(".tour-filter-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       const category = btn.dataset.category || "all";
-      renderTours(category);
+      
+      const container = document.getElementById("tours-slider-wrapper");
+      renderSkeletons(container, 3);
+      
+      setTimeout(() => {
+        renderTours(category);
+      }, 140);
     });
   });
 

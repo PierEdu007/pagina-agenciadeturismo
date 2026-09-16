@@ -80,7 +80,7 @@ export function initScrollEffects() {
   }
 
   // Animaciones de entrada al Viewport (IntersectionObserver)
-  const revealElements = document.querySelectorAll(".reveal-on-scroll");
+  const revealElements = document.querySelectorAll(".reveal-on-scroll, .reveal-scale-up, .reveal-slide-right, .reveal-slide-left");
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
@@ -90,8 +90,8 @@ export function initScrollEffects() {
         }
       });
     }, {
-      rootMargin: "0px 0px -50px 0px",
-      threshold: 0.15
+      rootMargin: "0px 0px -40px 0px",
+      threshold: 0.12
     });
 
     revealElements.forEach(el => observer.observe(el));

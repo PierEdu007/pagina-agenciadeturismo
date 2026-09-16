@@ -1,0 +1,244 @@
+/* ==========================================================================
+   Sección de Llamado a la Acción Repetido (High-Conversion CTA Banner)
+   Hampinahuasi Travel S.A.C.
+   ========================================================================== */
+
+.cta-repeat-section {
+  padding: 6rem 0;
+  background: var(--color-cream-bg);
+  position: relative;
+}
+
+.cta-banner-card {
+  position: relative;
+  background: linear-gradient(145deg, #131A17 0%, #0B0F0E 100%);
+  border: 1px solid rgba(212, 163, 115, 0.25);
+  border-radius: var(--radius-xl);
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 3.5rem);
+  color: #FFFFFF;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Efectos de Iluminación Ambiental de Fondo */
+.cta-glow-orb-left {
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(200, 90, 50, 0.22) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.cta-glow-orb-right {
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(212, 163, 115, 0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.cta-pattern-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+/* Contenido Principal */
+.cta-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.cta-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(212, 163, 115, 0.15);
+  border: 1px solid rgba(212, 163, 115, 0.35);
+  color: var(--color-gold);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.45rem 1.15rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.25rem;
+}
+
+.cta-tag-badge i {
+  font-size: 0.95rem;
+}
+
+.cta-title {
+  font-family: var(--font-hero);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+.cta-title span {
+  color: var(--color-gold-light);
+  font-style: italic;
+  display: inline-block;
+}
+
+.cta-subtitle {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  color: #D6E0DC;
+  line-height: 1.65;
+  margin-bottom: 2.25rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ticker / Pills de Confianza */
+.cta-features-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.75rem;
+}
+
+.cta-feature-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  backdrop-filter: blur(8px);
+}
+
+.cta-feature-item i {
+  color: var(--color-gold);
+  font-size: 0.95rem;
+}
+
+/* Botones de Acción */
+.cta-actions-group {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.btn-cta-whatsapp {
+  background-color: #25D366;
+  color: #FFFFFF;
+  font-size: 1rem;
+  padding: 1rem 2.2rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-cta-whatsapp:hover {
+  background-color: #20BA56;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.45);
+}
+
+.btn-cta-quote {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #FFFFFF;
+  font-size: 1rem;
+  padding: 1rem 2.2rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-fast);
+}
+
+.btn-cta-quote:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+  color: #FFFFFF;
+}
+
+/* Nota de Contacto Rápido */
+.cta-support-footnote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-dim);
+}
+
+.cta-support-footnote a {
+  color: var(--color-gold);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cta-support-footnote a:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width: 640px) {
+  .cta-repeat-section {
+    padding: 3.5rem 0;
+  }
+
+  .cta-banner-card {
+    padding: 2.25rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .cta-actions-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.85rem;
+  }
+
+  .btn-cta-whatsapp,
+  .btn-cta-quote {
+    width: 100%;
+    justify-content: center;
+    padding: 0.95rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .cta-features-strip {
+    gap: 0.5rem;
+  }
+
+  .cta-feature-item {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.85rem;
+  }
+}
