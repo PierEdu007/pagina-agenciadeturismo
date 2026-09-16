@@ -93,27 +93,47 @@ export const TOURS_DATA = [
   },
   {
     id: "city-tour-cusco",
-    title: "City Tour Cusco",
+    title: "City Tour Cusco: Templos & Fortalezas",
     category: "cultura",
     categoryLabel: "Cultura y patrimonio",
-    tag: "Capital Imperial",
-    isFeatured: false,
-    duration: "Medio Día (13:00 - 18:30)",
+    tag: "Medio Día",
+    isFeatured: true,
+    duration: "5 hrs aprox",
+    departureTime: "13:00 hrs",
+    departureLocation: "Plaza de Armas de Cusco",
+    returnTime: "18:00 hrs aprox",
+    returnLocation: "Centro histórico de Cusco",
     difficulty: "Nivel Fácil",
-    altitude: "3,600 msnm",
-    maxGroup: 8,
-    priceUSD: 32,
-    pricePEN: 120,
-    image: "/images/cusco-plaza-de-armas.jpg",
-    summary: "Descubre el templo solar Qorikancha, la megalítica fortaleza de Sacsayhuamán, Q'enqo, Puka Pukara y Tambomachay en un recorrido exclusivo sin prisas.",
-    inclusions: [
-      "Transporte turístico privado exclusivo",
-      "Ingreso guiado al Templo del Sol Qorikancha",
-      "Guía arqueológico especializado e historiador local",
-      "Agua mineral embotellada y refrigerio andino"
+    altitude: "3,400 - 3,700 msnm",
+    maxGroup: "Grupal o Privado",
+    priceUSD: 16,
+    pricePEN: 60,
+    pricePrivateUSD: 48,
+    pricePrivatePEN: 180,
+    image: "/images/city-tour-cusco.jpg",
+    summary: "Partida a las 13:00 hrs desde la Plaza de Armas. Visita guiada a la Catedral de Cusco, Qoricancha, Sacsayhuamán, Qenqo, Puca Pucara y Tambomachay. Retorno al centro histórico a las 18:00 hrs.",
+    places: [
+      "Catedral de Cusco",
+      "Qoricancha",
+      "Sacsayhuamán",
+      "Qenqo",
+      "Puca Pucara",
+      "Tambomachay"
     ],
+    inclusions: [
+      "Recojo de pasajeros",
+      "Transporte turístico equipado",
+      "Guía oficial bilingüe (Español e Inglés)"
+    ],
+    nonInclusions: [
+      "Entradas: Catedral S/.40, Qoricancha S/.20, Boleto Turístico S/.70"
+    ],
+    notes: "Tour en grupo. En el centro arqueológico de Sacsayhuamán pueden comprar sus Boletos Turísticos: General (Extranjeros S/.130 / Nacional S/.70 válido 10 días) o Parcial (Extranjero S/.70 / Nacional S/.40 válido 1-2 días).",
     extras: [
-      { id: "catedral", name: "Acceso y guiado a la Catedral del Cusco", priceUSD: 18, pricePEN: 70 }
+      { id: "tour_privado", name: "Servicio Privado Exclusivo ($48 USD / S/. 180 PEN por persona)", priceUSD: 32, pricePEN: 120 },
+      { id: "entrada_catedral", name: "Entrada a la Catedral del Cusco (S/. 40 PEN)", priceUSD: 11, pricePEN: 40 },
+      { id: "entrada_qoricancha", name: "Entrada al Templo Qoricancha (S/. 20 PEN)", priceUSD: 6, pricePEN: 20 },
+      { id: "boleto_turistico_parcial", name: "Boleto Turístico Parcial Circuito I (S/. 70 PEN)", priceUSD: 19, pricePEN: 70 }
     ]
   },
 

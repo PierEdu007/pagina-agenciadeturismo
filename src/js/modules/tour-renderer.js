@@ -34,7 +34,7 @@ export function renderTours(category = "all") {
         <div class="tour-media-frame">
           <span class="tour-tag-badge ${tour.isFeatured ? 'featured' : ''}">${tour.tag}</span>
           <span class="tour-pax-badge">
-            <i class="fa-solid fa-users-line"></i> Máx. ${tour.maxGroup}
+            <i class="fa-solid fa-users-line"></i> ${typeof tour.maxGroup === "number" ? `Máx. ${tour.maxGroup}` : tour.maxGroup}
           </span>
           <img 
             src="${tour.image}" 
@@ -65,11 +65,18 @@ export function renderTours(category = "all") {
             ${tour.inclusions.slice(0, 3).map(inc => `
               <li><i class="fa-solid fa-check"></i> <span>${inc}</span></li>
             `).join("")}
+            ${tour.nonInclusions ? `
+              <li style="color: var(--color-text-muted); font-size: 0.8rem;"><i class="fa-solid fa-circle-exclamation" style="color: var(--color-terracotta); background-color: var(--color-terracotta-subtle);"></i> <span>No incl. entradas (S/. 20 - 70)</span></li>
+            ` : ""}
           </ul>
 
           <div class="tour-card-footer">
             <div class="tour-pricing">
-              <span class="price-subtext">Tarifa por persona</span>
+              <span class="price-subtext" data-tour-subtext>
+                ${tour.pricePrivateUSD 
+                  ? (currency === "USD" ? `Grupal $${tour.priceUSD} · Privado $${tour.pricePrivateUSD}` : `Grupal S/ ${tour.pricePEN} · Privado S/ ${tour.pricePrivatePEN}`)
+                  : "Tarifa por persona"}
+              </span>
               <div class="price-amount" data-tour-price>
                 ${formatPrice(price, currency)}
                 <span class="price-currency">${currency}</span>
@@ -138,6 +145,12 @@ export function initTourTabs() {
             ${formatPrice(price, newCurrency)}
             <span class="price-currency">${newCurrency}</span>
           `;
+        }
+        const subtextElement = card.querySelector("[data-tour-subtext]");
+        if (subtextElement && tour.pricePrivateUSD) {
+          subtextElement.textContent = newCurrency === "USD"
+            ? `Grupal $${tour.priceUSD} · Privado $${tour.pricePrivateUSD}`
+            : `Grupal S/ ${tour.pricePEN} · Privado S/ ${tour.pricePrivatePEN}`;
         }
       }
     });
