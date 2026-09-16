@@ -71,19 +71,15 @@
   <!-- Overlay para menú móvil -->
   <div class="nav-overlay" id="nav-overlay"></div>
 
-  <!-- Hero Cinematográfico con Video y Scrollytelling -->
+  <!-- Hero Cinematográfico con Fotografía Principal Auténtica -->
   <section class="hero">
     <div class="hero-media-wrapper">
-      <video 
-        class="hero-video" 
-        autoplay 
-        muted 
-        loop 
-        playsinline
-        poster="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1920&q=80"
-      >
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-clouds-over-a-mountain-valley-41484-large.mp4" type="video/mp4" />
-      </video>
+      <img 
+        src="/images/ceremonia-sanacion-andina.jpg" 
+        alt="Ceremonia de sanación andina en Cusco - Hanpinahuasi Travel" 
+        class="hero-bg-img"
+        fetchpriority="high"
+      />
       <div class="hero-overlay"></div>
       <div class="hero-texture"></div>
     </div>
@@ -99,7 +95,7 @@
       </h1>
 
       <p class="hero-subtitle">
-        Rutas exclusivas en grupos reducidos de máximo 8 viajeros, guías locales certificados y logística impecable desde tu llegada a los Andes.
+        Conectamos a las personas con la naturaleza, la cultura viva y las comunidades para transformar vidas y preservar el legado de los Andes. Rutas exclusivas, experiencias privadas y sabiduría ancestral.
       </p>
 
       <div class="hero-ctas">
@@ -134,19 +130,19 @@
       <!-- Grupo 1 -->
       <div class="trust-item">
         <div class="trust-item-icon"><i class="fa-solid fa-users-line"></i></div>
-        <span><strong>Máximo 8 viajeros</strong> por grupo</span>
+        <span><strong>Máximo 8 viajeros</strong> o servicios privados</span>
       </div>
       <div class="trust-item">
-        <div class="trust-item-icon"><i class="fa-solid fa-kit-medical"></i></div>
-        <span><strong>Oxígeno y botiquín</strong> de alta montaña</span>
+        <div class="trust-item-icon"><i class="fa-solid fa-leaf"></i></div>
+        <span><strong>Respeto a la Pachamama</strong> y los Apus</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-solid fa-hands-holding-heart"></i></div>
+        <span><strong>Parte de cada experiencia</strong> apoya a la ONG</span>
       </div>
       <div class="trust-item">
         <div class="trust-item-icon"><i class="fa-solid fa-star"></i></div>
         <span><strong>4.9 / 5</strong> en TripAdvisor & Google Reviews</span>
-      </div>
-      <div class="trust-item">
-        <div class="trust-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
-        <span><strong>Reserva directa</strong> por WhatsApp</span>
       </div>
       <div class="trust-item">
         <div class="trust-item-icon"><i class="fa-solid fa-award"></i></div>
@@ -154,25 +150,25 @@
       </div>
       <div class="trust-item">
         <div class="trust-item-icon"><i class="fa-solid fa-person-hiking"></i></div>
-        <span><strong>Guías Oficiales</strong> cusqueños bilingües</span>
+        <span><strong>Guías Oficiales</strong> y saberes ancestrales</span>
       </div>
 
       <!-- Duplicado para ciclo continuo sin saltos -->
       <div class="trust-item">
         <div class="trust-item-icon"><i class="fa-solid fa-users-line"></i></div>
-        <span><strong>Máximo 8 viajeros</strong> por grupo</span>
+        <span><strong>Máximo 8 viajeros</strong> o servicios privados</span>
       </div>
       <div class="trust-item">
-        <div class="trust-item-icon"><i class="fa-solid fa-kit-medical"></i></div>
-        <span><strong>Oxígeno y botiquín</strong> de alta montaña</span>
+        <div class="trust-item-icon"><i class="fa-solid fa-leaf"></i></div>
+        <span><strong>Respeto a la Pachamama</strong> y los Apus</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon"><i class="fa-solid fa-hands-holding-heart"></i></div>
+        <span><strong>Parte de cada experiencia</strong> apoya a la ONG</span>
       </div>
       <div class="trust-item">
         <div class="trust-item-icon"><i class="fa-solid fa-star"></i></div>
         <span><strong>4.9 / 5</strong> en TripAdvisor & Google Reviews</span>
-      </div>
-      <div class="trust-item">
-        <div class="trust-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
-        <span><strong>Reserva directa</strong> por WhatsApp</span>
       </div>
       <div class="trust-item">
         <div class="trust-item-icon"><i class="fa-solid fa-award"></i></div>
@@ -180,20 +176,36 @@
       </div>
       <div class="trust-item">
         <div class="trust-item-icon"><i class="fa-solid fa-person-hiking"></i></div>
-        <span><strong>Guías Oficiales</strong> cusqueños bilingües</span>
+        <span><strong>Guías Oficiales</strong> y saberes ancestrales</span>
       </div>
     </div>
   </section>
 
-  <!-- Sección de Tours con Carrusel Táctil Swiper -->
+  <!-- Sección de Tours y Experiencias con 3 Secciones Oficiales -->
   <main class="tours-section" id="tours">
     <div class="container">
       <div class="section-header reveal-on-scroll">
         <span class="section-tag">
-          <i class="fa-solid fa-map-location-dot"></i> Rutas Seleccionadas
+          <i class="fa-solid fa-compass"></i> Experiencias Diseñadas a Medida
         </span>
-        <h2>Experiencias Diseñadas a Medida</h2>
-        <p>Tarifas transparentes con circuitos oficiales garantizados, trenes panorámicos y grupos reducidos.</p>
+        <h2>Cultura, Aventura y Sabiduría Ancestral</h2>
+        <p>Rutas privadas y grupos reducidos para conectar profundamente con el alma del Cusco y la tradición inca.</p>
+      </div>
+
+      <!-- Pestañas de las 3 Secciones de Experiencias -->
+      <div class="tours-filter-tabs" id="tours-filter-tabs">
+        <button class="tour-filter-btn active" data-category="all">
+          <i class="fa-solid fa-compass"></i> Todas
+        </button>
+        <button class="tour-filter-btn" data-category="cultura">
+          <i class="fa-solid fa-landmark"></i> Cultura y Patrimonio
+        </button>
+        <button class="tour-filter-btn" data-category="naturaleza">
+          <i class="fa-solid fa-mountain-sun"></i> Naturaleza y Aventura
+        </button>
+        <button class="tour-filter-btn" data-category="mistica">
+          <i class="fa-solid fa-leaf"></i> Místicas y de Bienestar
+        </button>
       </div>
 
       <!-- Contenedor del Carrusel Swiper -->
@@ -213,6 +225,14 @@
           <button class="carousel-nav-btn btn-next" aria-label="Siguiente tour">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
+        </div>
+
+        <!-- Nota Ética / Legal para Experiencias Místicas -->
+        <div class="mystical-disclaimer-note" id="mystical-disclaimer-note">
+          <i class="fa-solid fa-leaf"></i>
+          <div>
+            <strong>Enfoque cultural y de bienestar:</strong> Nuestras experiencias místicas se presentan como vivencias culturales, espirituales y de bienestar inspiradas en la cosmovisión andina y la tradición inca, orientadas a la introspección personal y el respeto por los conocimientos ancestrales, sin prometer resultados médicos ni curaciones garantizadas.
+          </div>
         </div>
       </div>
     </div>
