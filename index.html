@@ -65,7 +65,7 @@
         <li><a href="/ong.html" class="nav-link">ONG</a></li>
         <li><a href="#contacto" class="nav-link">Contacto</a></li>
         <li class="mobile-nav-cta" style="display: none;">
-          <button class="btn btn-primary" style="width: 100%;" onclick="window.openBookingDrawer && window.openBookingDrawer('machu-picchu-clasico')">
+          <button class="btn btn-primary" style="width: 100%;" onclick="window.openBookingDrawer && window.openBookingDrawer('city-tour-cusco')">
             <i class="fa-solid fa-calendar-check"></i> Reservar Experiencia
           </button>
         </li>
@@ -78,7 +78,7 @@
           <button class="currency-btn" data-currency="PEN">PEN S/</button>
         </div>
 
-        <button class="btn btn-primary btn-sm" onclick="window.openBookingDrawer && window.openBookingDrawer('machu-picchu-clasico')" title="Reservar">
+        <button class="btn btn-primary btn-sm" onclick="window.openBookingDrawer && window.openBookingDrawer('city-tour-cusco')" title="Reservar">
           <i class="fa-solid fa-calendar-check"></i> <span class="btn-text-nav">Reservar</span>
         </button>
 
@@ -128,7 +128,7 @@
         <a href="#tours" class="btn btn-primary shimmer-effect">
           <i class="fa-solid fa-compass"></i> Ver Experiencias
         </a>
-        <button class="btn btn-outline" onclick="window.openBookingDrawer && window.openBookingDrawer('machu-picchu-clasico')">
+        <button class="btn btn-outline" onclick="window.openBookingDrawer && window.openBookingDrawer('city-tour-cusco')">
           <i class="fa-solid fa-calculator"></i> Cotizar Online
         </button>
       </div>
@@ -218,19 +218,22 @@
         <p>Rutas privadas y grupos reducidos para conectar profundamente con el alma del Cusco y la tradición inca.</p>
       </div>
 
-      <!-- Pestañas de las 3 Secciones de Experiencias -->
+      <!-- Pestañas de Secciones de Experiencias -->
       <div class="tours-filter-tabs" id="tours-filter-tabs">
         <button class="tour-filter-btn active" data-category="all">
           <i class="fa-solid fa-compass"></i> Todas
         </button>
-        <button class="tour-filter-btn" data-category="cultura">
-          <i class="fa-solid fa-landmark"></i> Cultura y Patrimonio
+        <button class="tour-filter-btn" data-category="cultural">
+          <i class="fa-solid fa-landmark"></i> Culturales & Arqueología
         </button>
-        <button class="tour-filter-btn" data-category="naturaleza">
-          <i class="fa-solid fa-mountain-sun"></i> Naturaleza y Aventura
+        <button class="tour-filter-btn" data-category="aventura">
+          <i class="fa-solid fa-mountain-sun"></i> Aventura & Trekking
         </button>
         <button class="tour-filter-btn" data-category="mistica">
-          <i class="fa-solid fa-leaf"></i> Místicas y de Bienestar
+          <i class="fa-solid fa-leaf"></i> Mística & Sabiduría
+        </button>
+        <button class="tour-filter-btn" data-category="exclusivo">
+          <i class="fa-solid fa-wine-glass-empty"></i> Picnic & Exclusivas
         </button>
       </div>
 
@@ -503,7 +506,7 @@
 
             <button 
               class="btn-cta-quote"
-              onclick="window.openBookingDrawer && window.openBookingDrawer('machu-picchu-clasico')"
+              onclick="window.openBookingDrawer && window.openBookingDrawer('city-tour-cusco')"
             >
               <i class="fa-solid fa-calendar-check"></i>
               <span>Cotizar Experiencia en Línea</span>
@@ -512,12 +515,19 @@
 
           <div class="cta-support-footnote">
             <i class="fa-solid fa-headset" style="color: var(--color-gold);"></i>
-            <span>¿Prefieres hablar directamente? Escríbenos o llámanos al <a href="https://wa.me/51954103786" target="_blank" rel="noopener noreferrer">+51 954 103 786</a></span>
+            <span>¿Prefieres hablar directamente? Escríbenos o llámanos al <a href="https://wa.me/51983878473" target="_blank" rel="noopener noreferrer">+51 983 878 473</a></span>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Modal Interactivo Cinematográfico: Ficha de Experiencia (Ver Experiencia) -->
+  <div class="exp-modal-backdrop" id="experience-modal-backdrop" aria-hidden="true">
+    <div class="exp-modal-dialog" id="experience-modal-dialog" role="dialog" aria-modal="true">
+      <!-- Inyectado dinámicamente por src/js/modules/experience-modal.js -->
+    </div>
+  </div>
 
   <!-- Modal / Drawer Interactivo de Pre-Reserva (Preparado para Culqi) -->
   <div class="booking-modal-backdrop" id="booking-modal-backdrop" style="display: none;" aria-hidden="true">
@@ -705,11 +715,11 @@
         <div class="footer-col">
           <h5 class="footer-heading">Experiencias</h5>
           <ul class="footer-links-list">
-            <li><a href="#tours"><i class="fa-solid fa-landmark"></i> Machu Picchu Full Day</a></li>
             <li><a href="#tours"><i class="fa-solid fa-landmark"></i> City Tour Arqueológico</a></li>
-            <li><a href="#tours"><i class="fa-solid fa-landmark"></i> Valle Sagrado & Maras</a></li>
+            <li><a href="#tours"><i class="fa-solid fa-landmark"></i> Full Day Valle Sagrado</a></li>
             <li><a href="#tours"><i class="fa-solid fa-mountain-sun"></i> Laguna Humantay</a></li>
             <li><a href="#tours"><i class="fa-solid fa-mountain-sun"></i> Montaña de 7 Colores</a></li>
+            <li><a href="#tours"><i class="fa-solid fa-motorcycle"></i> Cuatrimotos Moray</a></li>
             <li><a href="#tours"><i class="fa-solid fa-leaf"></i> Ritual a la Pachamama</a></li>
           </ul>
         </div>
@@ -730,7 +740,7 @@
           <h5 class="footer-heading">Contacto Cusco</h5>
           <ul class="footer-links-list">
             <li><i class="fa-solid fa-location-dot"></i> <span>Calle Plateros 312, Centro Histórico, Cusco</span></li>
-            <li><i class="fa-solid fa-phone"></i> <a href="https://wa.me/51954103786" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">+51 954 103 786</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="https://wa.me/51983878473" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">+51 983 878 473</a></li>
             <li><i class="fa-regular fa-envelope"></i> <span>reservas@hanpinahuasitravel.com</span></li>
             <li><i class="fa-solid fa-clock"></i> <span>Lun - Dom: 06:00 - 21:00</span></li>
           </ul>
@@ -738,7 +748,7 @@
       </div>
 
       <div class="footer-bottom-bar">
-        <p>© 2026 Hanpinahuasi Travel. Todos los derechos reservados. | <a href="https://wa.me/51954103786" target="_blank" rel="noopener noreferrer" style="color: var(--color-gold); text-decoration: none; font-weight: 600;">Hecho por PAMCo</a></p>
+        <p>© 2026 Hanpinahuasi Travel. Todos los derechos reservados. | <a href="https://wa.me/51983878473" target="_blank" rel="noopener noreferrer" style="color: var(--color-gold); text-decoration: none; font-weight: 600;">Hecho por PAMCo</a></p>
         <div class="footer-badges-strip">
           <span class="footer-badge-item"><i class="fa-brands fa-whatsapp"></i> Reservas Directas</span>
           <span class="footer-badge-item"><i class="fa-solid fa-award"></i> DIRCETUR Cusco</span>
@@ -748,10 +758,12 @@
     </div>
   </footer>
 
-  <!-- Exponer función global para abrir el modal desde botones HTML -->
+  <!-- Exponer funciones globales para abrir modales desde botones HTML -->
   <script type="module">
     import { openBookingDrawer } from "/src/js/modules/booking-engine.js";
+    import { openExperienceModal } from "/src/js/modules/experience-modal.js";
     window.openBookingDrawer = openBookingDrawer;
+    window.openExperienceModal = openExperienceModal;
   </script>
 </body>
 </html>

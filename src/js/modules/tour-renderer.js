@@ -6,6 +6,7 @@
 import { TOURS_DATA, TOUR_CATEGORIES } from "../../data/tours.js";
 import { getCurrentCurrency, formatPrice } from "./currency.js";
 import { openBookingDrawer } from "./booking-engine.js";
+import { openExperienceModal } from "./experience-modal.js";
 import { initCarousel } from "./carousel.js";
 
 let currentCategory = "all";
@@ -85,8 +86,8 @@ export function renderTours(category = "all") {
                 <span class="price-currency">${currency}</span>
               </div>
             </div>
-            <button class="btn-book-action" data-action="book" data-tour-id="${tour.id}">
-              <i class="fa-solid fa-calendar-check"></i> Reservar
+            <button class="btn-tour-detail" data-action="view-detail" data-tour-id="${tour.id}" title="Ver información completa de la experiencia">
+              <span>Ver experiencia</span> <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
         </div>
@@ -106,11 +107,22 @@ export function renderTours(category = "all") {
     }
   }
 
-  // Vincular eventos de apertura de reserva
-  container.querySelectorAll("[data-action='book']").forEach(btn => {
+  // Vincular eventos de apertura del modal de detalle de experiencia
+  container.querySelectorAll("[data-action='view-detail']").forEach(btn => {
     btn.addEventListener("click", (e) => {
       const tourId = e.currentTarget.dataset.tourId;
-      openBookingDrawer(tourId);
+      openExperienceModal(tourId);
+    });
+  });
+
+  // Permitir también abrir el detalle al hacer clic en la tarjeta o su imagen
+  container.querySelectorAll(".tour-media-frame, .tour-title").forEach(elem => {
+    elem.style.cursor = "pointer";
+    elem.addEventListener("click", (e) => {
+      const card = e.currentTarget.closest(".tour-card");
+      if (card && card.dataset.tourId) {
+        openExperienceModal(card.dataset.tourId);
+      }
     });
   });
 

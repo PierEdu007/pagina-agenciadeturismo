@@ -140,7 +140,8 @@ export function openBookingDrawer(tourId) {
       metaHtml += `<br><small style="display:block; margin-top: 4px; color: var(--color-gold); font-size: 0.78rem;"><i class="fa-solid fa-location-dot"></i> Partida: ${tour.departureLocation} (${tour.departureTime}) · Retorno: ${tour.returnTime}</small>`;
     }
     if (tour.notes) {
-      metaHtml += `<small style="display:block; margin-top: 6px; color: rgba(255,255,255,0.8); font-size: 0.74rem; line-height: 1.4; border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 4px;"><i class="fa-solid fa-circle-info" style="color: var(--color-gold);"></i> <strong>Nota:</strong> ${tour.notes}</small>`;
+      const notesText = Array.isArray(tour.notes) ? tour.notes.join(" | ") : tour.notes;
+      metaHtml += `<small style="display:block; margin-top: 6px; color: rgba(255,255,255,0.8); font-size: 0.74rem; line-height: 1.4; border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 4px;"><i class="fa-solid fa-circle-info" style="color: var(--color-gold);"></i> <strong>Nota:</strong> ${notesText}</small>`;
     }
     meta.innerHTML = metaHtml;
   }

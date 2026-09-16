@@ -13,6 +13,7 @@ import "../css/components/hero.css";
 import "../css/components/trust-ticker.css";
 import "../css/components/cards.css";
 import "../css/components/carousel.css";
+import "../css/components/experience-modal.css";
 import "../css/components/bento-gallery.css";
 import "../css/components/cta-banner.css";
 import "../css/components/booking-modal.css";
@@ -26,6 +27,7 @@ import { renderTours, initTourTabs } from "./modules/tour-renderer.js";
 import { initCarousel } from "./modules/carousel.js";
 import { initScrollEffects } from "./modules/scroll-effects.js";
 import { initBookingEngine } from "./modules/booking-engine.js";
+import { initExperienceModal } from "./modules/experience-modal.js";
 
 // Inicializar Preloader inmediatamente
 initPreloader();
@@ -37,6 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Renderizar tarjetas de tour dinámicamente y activar pestañas
   renderTours("all");
   initTourTabs();
+
+  // Inicializar modal de detalle de experiencia
+  initExperienceModal();
 
   // Inicializar motor de reserva y modal Culqi
   initBookingEngine();
