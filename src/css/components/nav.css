@@ -293,15 +293,15 @@ body.nav-open {
   }
 
   .navbar {
-    padding: 0.4rem 0.4rem 0.4rem 0.75rem;
-    gap: 0.35rem;
+    padding: 0.45rem 0.5rem 0.45rem 0.85rem;
+    gap: 0.5rem;
     overflow: hidden;
   }
 
   .logo {
     font-size: 1.05rem;
     letter-spacing: 0.3px;
-    gap: 0.45rem;
+    gap: 0.5rem;
     min-width: 0;
     overflow: hidden;
     white-space: nowrap;
@@ -319,7 +319,7 @@ body.nav-open {
   }
 
   .nav-actions {
-    gap: 0.4rem;
+    gap: 0.5rem;
   }
 
   .currency-toggle {
@@ -331,15 +331,10 @@ body.nav-open {
     font-size: 0.68rem;
   }
 
-  /* Botón Reservar compacto en móvil */
-  .nav-actions .btn-primary.btn-sm {
-    padding: 0.45rem 0.6rem;
-    font-size: 0.8rem;
-    border-radius: var(--radius-xs);
-  }
-
-  .nav-actions .btn-primary.btn-sm .btn-text-nav {
-    display: none;
+  /* Eliminar botón reservar del navbar flotante en todos los dispositivos móviles */
+  .nav-actions .btn-primary.btn-sm,
+  .nav-actions .btn-nav-reserve {
+    display: none !important;
   }
 
   /* Botón hamburguesa visible */
