@@ -1,6 +1,6 @@
 # Hanpinahuasi Travel - Plataforma Web Oficial
 
-Plataforma web oficial y landing page interactiva de **Hanpinahuasi Travel**, agencia y operador turístico formal con sede en la ciudad del Cusco, Perú. Especializada en turismo vivencial, medicina ancestral andina y expediciones exclusivas en grupos reducidos de máximo 8 personas hacia Machu Picchu y las rutas sagradas de los Andes.
+Plataforma web oficial y landing page interactiva de **Hanpinahuasi Travel**, agencia y operador turístico formal con sede en la ciudad del Cusco, Perú. Especializada en turismo vivencial, medicina ancestral andina y expediciones exclusivas en grupos reducidos y servicios privados hacia Machu Picchu y las rutas sagradas de los Andes.
 
 ---
 
