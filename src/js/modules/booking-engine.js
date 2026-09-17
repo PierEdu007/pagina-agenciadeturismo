@@ -128,6 +128,12 @@ export function initBookingEngine() {
     bookingState.currency = e.detail.currency;
     recalculateTotals();
   });
+
+  // Inicializar selector interactivo de experiencias
+  initTourSelect();
+
+  // Establecer tour inicial por defecto
+  selectTour(TOURS_DATA[0].id);
 }
 
 function setupCounter(type, min, max, onChange) {
@@ -157,12 +163,53 @@ function setupCounter(type, min, max, onChange) {
   });
 }
 
-export function openBookingDrawer(tourId) {
+function initTourSelect() {
+  const select = document.getElementById("booking-tour-select");
+  if (!select) return;
+
+  select.innerHTML = "";
+
+  const categories = [
+    { id: "cultural", label: "Culturales & Arqueología" },
+    { id: "aventura", label: "Aventura & Trekking" },
+    { id: "mistica", label: "Mística & Sabiduría Ancestral" },
+    { id: "exclusivo", label: "Picnic & Exclusivas" }
+  ];
+
+  categories.forEach(cat => {
+    const toursInCat = TOURS_DATA.filter(t => t.category === cat.id);
+    if (toursInCat.length === 0) return;
+
+    const group = document.createElement("optgroup");
+    group.label = cat.label;
+
+    toursInCat.forEach(tour => {
+      const option = document.createElement("option");
+      option.value = tour.id;
+      option.textContent = `${tour.title} (${tour.duration})`;
+      group.appendChild(option);
+    });
+
+    select.appendChild(group);
+  });
+
+  select.addEventListener("change", (e) => {
+    selectTour(e.target.value);
+  });
+}
+
+export function selectTour(tourId) {
   const tour = TOURS_DATA.find(t => t.id === tourId) || TOURS_DATA[0];
   bookingState.tourId = tour.id;
   bookingState.tour = tour;
   bookingState.currency = getCurrentCurrency();
   bookingState.extras.clear();
+
+  // Sincronizar el valor del selector desplegable
+  const select = document.getElementById("booking-tour-select");
+  if (select && select.value !== tour.id) {
+    select.value = tour.id;
+  }
 
   const backdrop = document.getElementById("booking-modal-backdrop");
   if (!backdrop) return;
@@ -178,30 +225,69 @@ export function openBookingDrawer(tourId) {
   }
   if (title) title.textContent = tour.title;
 
-  // Precargar Flatpickr en segundo plano al abrir el cajón
-  ensureFlatpickr();
   if (meta) {
-    let metaHtml = `<i class="fa-solid fa-clock"></i> ${tour.duration} | <i class="fa-solid fa-mountain"></i> ${tour.difficulty}`;
+    let metaHtml = `
+      <div class="selected-tour-meta-badges">
+        <span class="selected-tour-badge"><i class="fa-regular fa-clock"></i> ${tour.duration}</span>
+        <span class="selected-tour-badge"><i class="fa-solid fa-mountain"></i> ${tour.difficulty}</span>
+        ${tour.altitude ? `<span class="selected-tour-badge"><i class="fa-solid fa-location-arrow"></i> ${tour.altitude}</span>` : ''}
+      </div>
+    `;
+
     if (tour.departureTime) {
-      metaHtml += `<br><small style="display:block; margin-top: 4px; color: var(--color-gold); font-size: 0.78rem;"><i class="fa-solid fa-location-dot"></i> Partida: ${tour.departureLocation} (${tour.departureTime}) · Retorno: ${tour.returnTime}</small>`;
+      metaHtml += `
+        <div class="selected-tour-departure">
+          <i class="fa-solid fa-location-dot"></i>
+          <span><strong>Salida:</strong> ${tour.departureLocation} (${tour.departureTime}) · <strong>Retorno:</strong> ${tour.returnTime}</span>
+        </div>
+      `;
     }
+
     if (tour.notes) {
-      const notesText = Array.isArray(tour.notes) ? tour.notes.join(" | ") : tour.notes;
-      metaHtml += `<small style="display:block; margin-top: 6px; color: rgba(255,255,255,0.8); font-size: 0.74rem; line-height: 1.4; border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 4px;"><i class="fa-solid fa-circle-info" style="color: var(--color-gold);"></i> <strong>Nota:</strong> ${notesText}</small>`;
+      const notesText = Array.isArray(tour.notes) ? tour.notes.join(" · ") : tour.notes;
+      metaHtml += `
+        <div class="selected-tour-note">
+          <i class="fa-solid fa-circle-info"></i>
+          <div><strong>Nota:</strong> ${notesText}</div>
+        </div>
+      `;
     }
+
     meta.innerHTML = metaHtml;
   }
 
-  // Renderizar extras del tour
+  // Renderizar extras del tour seleccionado
   renderTourExtras(tour);
 
-  // Recalcular y abrir
+  // Recalcular precios
   recalculateTotals();
+}
+
+export function openBookingDrawer(tourId) {
+  const targetId = tourId || bookingState.tourId || TOURS_DATA[0].id;
+  selectTour(targetId);
+
+  // Precargar Flatpickr en segundo plano al abrir el cajón
+  ensureFlatpickr();
+
+  const backdrop = document.getElementById("booking-modal-backdrop");
+  if (!backdrop) return;
+
   stopLenis();
   backdrop.style.display = "flex";
   void backdrop.offsetWidth; // Forzar reflow para que la animación CSS corra suavemente
   backdrop.classList.add("is-open");
   document.body.style.overflow = "hidden";
+
+  // Si se abre desde el botón de la cabecera (sin tour específico), enfocar el selector de experiencias
+  if (!tourId) {
+    const select = document.getElementById("booking-tour-select");
+    if (select) {
+      setTimeout(() => {
+        select.focus();
+      }, 150);
+    }
+  }
 }
 
 export function closeBookingDrawer() {

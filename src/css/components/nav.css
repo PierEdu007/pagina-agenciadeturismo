@@ -281,6 +281,140 @@ body.nav-open {
 }
 
 /* ======================================
+   Responsive Tablet & Pantallas Medianas (961px - 1170px)
+   Muestra en la barra: Logo + Experiencias + ONG + Cambio de Dólar + Menú Hamburguesa
+   ====================================== */
+@media (min-width: 961px) and (max-width: 1170px) {
+  .header-wrapper {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .header-wrapper.scrolled {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar {
+    padding: 0.5rem 0.85rem 0.5rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    gap: 0.55rem;
+  }
+
+  .logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Menú horizontal en la barra: mostrar únicamente Experiencias y ONG */
+  .nav-menu:not(.open) {
+    display: flex !important;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+  }
+
+  .nav-menu:not(.open) .nav-item-secondary,
+  .nav-menu:not(.open) .mobile-nav-cta {
+    display: none !important;
+  }
+
+  .nav-menu:not(.open) .nav-item-exp,
+  .nav-menu:not(.open) .nav-item-ong {
+    display: block !important;
+  }
+
+  .nav-menu:not(.open) .nav-link {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.25rem 0;
+  }
+
+  /* Acciones: selector de divisa visible, botón reservar oculto, botón hamburguesa activo */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .currency-toggle {
+    display: inline-flex !important;
+  }
+
+  .nav-actions .btn-primary.btn-sm,
+  .nav-actions .btn-nav-reserve {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: block !important;
+  }
+
+  .nav-overlay {
+    display: block;
+  }
+
+  /* Cajón lateral al abrir el menú hamburguesa */
+  .nav-menu.open {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 340px;
+    height: 100vh;
+    height: 100dvh;
+    background: #101614;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 4.75rem 1.75rem 2.5rem;
+    gap: 0;
+    box-shadow: -8px 0 35px rgba(0, 0, 0, 0.75);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    z-index: 1005;
+    transform: translate3d(0, 0, 0) !important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    overflow-y: auto;
+    transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.35s;
+  }
+
+  .nav-menu.open > li {
+    display: block !important;
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav-menu.open .nav-link {
+    font-size: 1.08rem;
+    font-family: var(--font-display);
+    color: rgba(255, 255, 255, 0.9);
+    display: block;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: color var(--transition-fast), padding-left var(--transition-fast);
+  }
+
+  .nav-menu.open .nav-link:hover,
+  .nav-menu.open .nav-link:active {
+    color: var(--color-gold);
+    padding-left: 0.5rem;
+  }
+
+  .nav-menu.open .mobile-nav-cta {
+    display: block !important;
+    margin-top: 1.5rem;
+  }
+}
+
+/* ======================================
    Responsive Mobile Nav (<= 960px)
    ====================================== */
 @media (max-width: 960px) {

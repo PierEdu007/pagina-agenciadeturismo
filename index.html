@@ -254,13 +254,13 @@
       </a>
 
       <ul class="nav-menu">
-        <li><a href="#tours" class="nav-link">Experiencias</a></li>
-        <li><a href="#por-que-hanpinahuasi" class="nav-link">Por qué Hanpinahuasi</a></li>
-        <li><a href="#galeria" class="nav-link">Galería</a></li>
-        <li><a href="/ong.html" class="nav-link">ONG</a></li>
-        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li class="nav-item-exp"><a href="#tours" class="nav-link">Experiencias</a></li>
+        <li class="nav-item-secondary"><a href="#por-que-hanpinahuasi" class="nav-link">Por qué Hanpinahuasi</a></li>
+        <li class="nav-item-secondary"><a href="#galeria" class="nav-link">Galería</a></li>
+        <li class="nav-item-ong"><a href="/ong.html" class="nav-link">ONG</a></li>
+        <li class="nav-item-secondary"><a href="#contacto" class="nav-link">Contacto</a></li>
         <li class="mobile-nav-cta" style="display: none;">
-          <button class="btn btn-primary" style="width: 100%;" onclick="window.openBookingDrawer && window.openBookingDrawer('city-tour-cusco')">
+          <button class="btn btn-primary" style="width: 100%;" onclick="window.openBookingDrawer && window.openBookingDrawer()">
             <i class="fa-solid fa-calendar-check"></i> Reservar Experiencia
           </button>
         </li>
@@ -273,7 +273,7 @@
           <button class="currency-btn" data-currency="PEN">PEN S/</button>
         </div>
 
-        <button class="btn btn-primary btn-sm" onclick="window.openBookingDrawer && window.openBookingDrawer('city-tour-cusco')" title="Reservar">
+        <button class="btn btn-primary btn-sm" onclick="window.openBookingDrawer && window.openBookingDrawer()" title="Reservar">
           <i class="fa-solid fa-calendar-check"></i> <span class="btn-text-nav">Reservar</span>
         </button>
 
@@ -323,7 +323,7 @@
         <a href="#tours" class="btn btn-primary shimmer-effect">
           <i class="fa-solid fa-compass"></i> Ver Experiencias
         </a>
-        <button class="btn btn-outline" onclick="window.openBookingDrawer && window.openBookingDrawer('city-tour-cusco')">
+        <button class="btn btn-outline" onclick="window.openBookingDrawer && window.openBookingDrawer()">
           <i class="fa-solid fa-calculator"></i> Cotizar Online
         </button>
       </div>
@@ -1788,7 +1788,7 @@
 
             <button 
               class="btn-cta-quote"
-              onclick="window.openBookingDrawer && window.openBookingDrawer('city-tour-cusco')"
+              onclick="window.openBookingDrawer && window.openBookingDrawer()"
             >
               <i class="fa-solid fa-calendar-check"></i>
               <span>Cotizar Experiencia en Línea</span>
@@ -1827,12 +1827,22 @@
 
       <!-- Contenido del Formulario de Reserva -->
       <div class="drawer-content">
+        <!-- Selector Interactivo de Experiencias / Tours -->
+        <div class="form-group booking-experience-picker">
+          <label for="booking-tour-select" class="form-label">
+            <i class="fa-solid fa-compass"></i> Elige tu Experiencia o Tour
+          </label>
+          <select id="booking-tour-select" class="form-select booking-tour-select" aria-label="Elige la experiencia turística deseada">
+            <!-- Opciones generadas dinámicamente según catálogo oficial -->
+          </select>
+        </div>
+
         <!-- Banner del Tour Seleccionado -->
         <div class="selected-tour-banner">
           <img src="" alt="Miniatura de la experiencia turística seleccionada" class="selected-tour-thumbnail" />
           <div class="selected-tour-info">
             <h4 class="selected-tour-title">Cargando experiencia...</h4>
-            <span class="selected-tour-meta"></span>
+            <div class="selected-tour-meta"></div>
           </div>
         </div>
 
