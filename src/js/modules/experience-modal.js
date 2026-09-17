@@ -116,7 +116,7 @@ export function openExperienceModal(tourId) {
   dialog.innerHTML = `
     <!-- Hero con Imagen y Badges -->
     <div class="exp-modal-hero">
-      <img src="${tour.image}" alt="${tour.title}" class="exp-modal-hero-img" decoding="async" />
+      <img src="${tour.image}" alt="${tour.title} en Cusco Perú - Hampinahuasi Travel" class="exp-modal-hero-img" decoding="async" />
       <div class="exp-modal-hero-overlay"></div>
       
       <button class="exp-modal-close-btn" id="btn-close-exp-modal" aria-label="Cerrar ficha de experiencia">

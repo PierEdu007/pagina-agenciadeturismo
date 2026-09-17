@@ -1,0 +1,18 @@
+# Cabeceras de seguridad y optimización para servidores estáticos (Netlify, Cloudflare, etc.)
+
+# Proteger y bloquear mapas de origen (sourcemaps) en producción
+/*.map
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store, max-age=0
+
+# Reglas para el Sitemap XML
+/sitemap.xml
+  Content-Type: application/xml; charset=UTF-8
+  X-Robots-Tag: all
+  Cache-Control: public, max-age=86400
+
+# Reglas para Robots.txt
+/robots.txt
+  Content-Type: text/plain; charset=UTF-8
+  X-Robots-Tag: all
+  Cache-Control: public, max-age=86400

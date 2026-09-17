@@ -3,8 +3,6 @@
  * Preparado para Pasarela Culqi Checkout y Supabase DB
  */
 
-import flatpickr from "flatpickr";
-import "flatpickr/dist/flatpickr.min.css";
 import { TOURS_DATA } from "../../data/tours.js";
 import { getCurrentCurrency, formatPrice } from "./currency.js";
 import { stopLenis, startLenis } from "./scroll-effects.js";
@@ -20,6 +18,38 @@ let bookingState = {
 };
 
 let datepickerInstance = null;
+let isFlatpickrLoading = false;
+
+// Carga diferida (lazy-loading) de Flatpickr bajo demanda para optimizar el bundle JS crítico
+async function ensureFlatpickr() {
+  if (datepickerInstance || isFlatpickrLoading) return datepickerInstance;
+  isFlatpickrLoading = true;
+  try {
+    const [{ default: flatpickr }] = await Promise.all([
+      import("flatpickr"),
+      import("flatpickr/dist/flatpickr.min.css")
+    ]);
+    const dateInput = document.getElementById("booking-date");
+    if (dateInput && !datepickerInstance) {
+      datepickerInstance = flatpickr(dateInput, {
+        minDate: "today",
+        dateFormat: "Y-m-d",
+        altInput: true,
+        altFormat: "F j, Y",
+        defaultDate: new Date().fp_incr(3), // Sugerir 3 días después
+        onChange: (selectedDates, dateStr) => {
+          bookingState.date = dateStr;
+          recalculateTotals();
+        }
+      });
+    }
+  } catch (err) {
+    console.error("Error al cargar Flatpickr dinámicamente:", err);
+  } finally {
+    isFlatpickrLoading = false;
+  }
+  return datepickerInstance;
+}
 
 export function initBookingEngine() {
   const backdrop = document.getElementById("booking-modal-backdrop");
@@ -62,20 +92,11 @@ export function initBookingEngine() {
     }
   });
 
-  // Inicializar Flatpickr
+  // Inicializar Flatpickr de forma perezosa al interactuar con el campo de fecha
   const dateInput = document.getElementById("booking-date");
   if (dateInput) {
-    datepickerInstance = flatpickr(dateInput, {
-      minDate: "today",
-      dateFormat: "Y-m-d",
-      altInput: true,
-      altFormat: "F j, Y",
-      defaultDate: new Date().fp_incr(3), // Sugerir 3 días después
-      onChange: (selectedDates, dateStr) => {
-        bookingState.date = dateStr;
-        recalculateTotals();
-      }
-    });
+    dateInput.addEventListener("focus", ensureFlatpickr, { once: true });
+    dateInput.addEventListener("click", ensureFlatpickr, { once: true });
   }
 
   // Controladores de Pasajeros Adultos
@@ -151,8 +172,14 @@ export function openBookingDrawer(tourId) {
   const title = backdrop.querySelector(".selected-tour-title");
   const meta = backdrop.querySelector(".selected-tour-meta");
 
-  if (thumbnail) thumbnail.src = tour.image;
+  if (thumbnail) {
+    thumbnail.src = tour.image;
+    thumbnail.alt = tour.title;
+  }
   if (title) title.textContent = tour.title;
+
+  // Precargar Flatpickr en segundo plano al abrir el cajón
+  ensureFlatpickr();
   if (meta) {
     let metaHtml = `<i class="fa-solid fa-clock"></i> ${tour.duration} | <i class="fa-solid fa-mountain"></i> ${tour.difficulty}`;
     if (tour.departureTime) {

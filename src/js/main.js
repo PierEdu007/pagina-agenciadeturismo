@@ -18,7 +18,6 @@ import "../css/components/bento-gallery.css";
 import "../css/components/cta-banner.css";
 import "../css/components/booking-modal.css";
 import "../css/components/footer.css";
-import "../css/components/ong.css";
 import "../css/components/not-found.css";
 
 // Módulos de Lógica
@@ -27,9 +26,13 @@ import { initCurrency } from "./modules/currency.js";
 import { renderTours, initTourTabs } from "./modules/tour-renderer.js";
 import { initCarousel } from "./modules/carousel.js";
 import { initScrollEffects } from "./modules/scroll-effects.js";
-import { initBookingEngine } from "./modules/booking-engine.js";
-import { initExperienceModal } from "./modules/experience-modal.js";
+import { initBookingEngine, openBookingDrawer } from "./modules/booking-engine.js";
+import { initExperienceModal, openExperienceModal } from "./modules/experience-modal.js";
 import { initGallery } from "./modules/gallery.js";
+
+// Exponer funciones globales para llamadas desde atributos onclick o elementos HTML
+window.openBookingDrawer = openBookingDrawer;
+window.openExperienceModal = openExperienceModal;
 
 // Inicializar Preloader inmediatamente
 initPreloader();

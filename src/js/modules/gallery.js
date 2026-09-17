@@ -65,7 +65,7 @@ export function initGallery() {
 
       if (lightbox && lightboxImg && img) {
         lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt || title;
+        lightboxImg.alt = img.alt || title || "Fotografía de la experiencia en Cusco - Hampinahuasi Travel";
         if (lightboxTitle) lightboxTitle.textContent = title;
         if (lightboxCaption) lightboxCaption.textContent = caption;
 
