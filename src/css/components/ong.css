@@ -385,9 +385,39 @@
 
 .ong-cta-actions {
   display: flex;
-  gap: 1rem;
+  gap: 1.15rem;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+}
+
+.ong-cta-actions .btn-outline,
+.ong-cta-actions .btn-outline-dark {
+  background: var(--color-cream-subtle);
+  color: var(--color-text-main) !important;
+  border: 1.5px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+}
+
+.ong-cta-actions .btn-outline:hover,
+.ong-cta-actions .btn-outline-dark:hover {
+  background: #FFFFFF;
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta) !important;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(200, 90, 50, 0.18);
+}
+
+.ong-cta-actions .btn-outline i,
+.ong-cta-actions .btn-outline-dark i {
+  color: var(--color-terracotta);
+  transition: transform var(--transition-fast);
+}
+
+.ong-cta-actions .btn-outline:hover i,
+.ong-cta-actions .btn-outline-dark:hover i {
+  transform: scale(1.15);
 }
 
 /* Responsive */

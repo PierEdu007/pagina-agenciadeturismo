@@ -203,6 +203,29 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
 }
 
+.btn-outline-dark {
+  background: var(--color-cream-card);
+  color: var(--color-text-main);
+  border: 1.5px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline-dark:hover {
+  background: #FFFFFF;
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(200, 90, 50, 0.16);
+}
+
+.btn-outline-dark:hover i {
+  color: var(--color-terracotta);
+}
+
+.btn-outline-dark:active {
+  transform: translateY(1px) scale(0.98);
+}
+
 .btn-secondary {
   background-color: var(--color-green-andes);
   color: #FFFFFF;
