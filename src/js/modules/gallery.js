@@ -59,8 +59,8 @@ export function initGallery() {
 
       // Si se pulsa en la foto o el pin, abrir el Lightbox cinematográfico
       const img = card.querySelector(".pinterest-img");
-      const title = card.querySelector(".pin-title")?.textContent || "";
-      const caption = card.querySelector(".pin-caption")?.textContent || "";
+      const title = card.dataset.title || card.querySelector(".pin-title")?.textContent || "";
+      const caption = card.dataset.caption || card.querySelector(".pin-caption")?.textContent || "";
 
       if (lightbox && lightboxImg && img) {
         lightboxImg.src = img.src;
