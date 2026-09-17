@@ -370,7 +370,7 @@ function updateModalPricing(tourId) {
 }
 
 function getWhatsAppBookingUrl(tour, currency, price) {
-  const phone = "51983878473";
+  const phone = "51930782790";
   const message = `Hola Hanpinahuasi Travel, deseo consultar disponibilidad y reservar la siguiente experiencia:
 - Experiencia: ${tour.title}
 - Salida desde: ${tour.departureLocation || 'Cusco'}

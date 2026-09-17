@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(import.meta.dirname, "index.html"),
         ong: resolve(import.meta.dirname, "ong.html"),
+        notFound: resolve(import.meta.dirname, "404.html"),
       },
     },
   },

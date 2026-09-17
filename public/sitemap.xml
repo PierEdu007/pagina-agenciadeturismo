@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://hanpinahuasitravel.com/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/cusco-plaza-de-armas.webp</image:loc>
+      <image:title>Hampinahuasi Travel Cusco</image:title>
+      <image:caption>Turismo formal, medicina ancestral y experiencias exclusivas en Cusco, Perú</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hanpinahuasitravel.com/ong.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/comunidad-nino-andes.webp</image:loc>
+      <image:title>Asociación Civil Hampinahuasi Cusco (ONG)</image:title>
+      <image:caption>Proyectos comunitarios, medicina ancestral, educación y reforestación andina</image:caption>
+    </image:image>
+  </url>
+</urlset>

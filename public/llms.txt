@@ -1,0 +1,151 @@
+# Hampinahuasi Travel & Hampinahuasi Cusco (ONG)
+
+> Operador turístico formal en Cusco, Perú (RUC: 20608912345, DIRCETUR Reg. Nº 4821-2024), especializado en turismo cultural, trekking de aventura y vivencias místicas de medicina ancestral andina. Operamos en grupos reducidos de máximo 8 viajeros y servicios 100% privados. Vinculados con la Asociación Civil Hampinahuasi Cusco para impulsar proyectos de salud, educación y reforestación andina bajo el principio sagrado del Ayni (reciprocidad).
+
+## Información General y Contacto Oficial
+
+- **Razón Social:** Hampinahuasi Travel S.A.C.
+- **RUC:** 20608912345
+- **Acreditación:** DIRCETUR Cusco Reg. Nº 4821-2024
+- **Dirección:** Calle Plateros 312, Centro Histórico, Cusco, Perú
+- **Canal Oficial de WhatsApp:** [+51 954 103 786](https://wa.me/51954103786)
+- **Atención Telefónica:** +51 954 103 786
+- **Correo Reservas:** reservas@hanpinahuasitravel.com
+- **Correo ONG:** ong@hanpinahuasitravel.com
+- **Horario de Atención:** Lunes a Domingo, de 06:00 a 21:00 (Hora de Perú, UTC-5)
+- **Sitio Web Principal:** https://hanpinahuasitravel.com/
+- **Página de la ONG:** https://hanpinahuasitravel.com/ong.html
+
+---
+
+## Catálogo Oficial de Experiencias y Tarifas (Temporada 2026)
+
+Todas las experiencias cuentan con transporte turístico autorizado, botiquín de primeros auxilios, balón de oxígeno para altura y guía profesional bilingüe (Español / Inglés).
+
+### 1. Experiencias Culturales & Tradicionales
+
+#### Tour de Medio Día: City Tour Cusco
+- **Código:** `city-tour-cusco`
+- **Punto y Hora de Partida:** Plaza de Armas de Cusco a las 13:00 hrs.
+- **Punto y Hora de Retorno:** Centro histórico de Cusco a las 18:00 hrs aprox.
+- **Duración:** 5 horas aprox.
+- **Lugares a Visitar:** Catedral de Cusco, Qoricancha (Templo del Sol), Sacsayhuamán, Qenqo, Puca Pucara y Tambomachay.
+- **Incluye:** Recojo en hotel/punto céntrico, transporte turístico confortable y guía oficial bilingüe.
+- **No Incluye:** Entradas (Catedral S/. 40, Qoricancha S/. 20, Boleto Turístico Cusco BTG).
+- **Tarifa Oficial:**
+  - Tour Grupal (máx. 8 personas): **$16 USD** (S/. 60 PEN) por persona.
+  - Tour Privado Exclusivo: **$48 USD** (S/. 180 PEN) por persona.
+- **Notas de Boletos:** Se pueden adquirir en el centro arqueológico de Sacsayhuamán. Existen 2 modalidades:
+  - a) General: Extranjeros S/. 130 | Nacionales S/. 70 (Válido por 10 días, 16 atractivos).
+  - b) Parcial: Extranjeros S/. 70 | Nacionales S/. 40 (Válido por 1 a 2 días según circuito).
+
+#### Machu Picchu Exclusivo en Tren Panorámico
+- **Código:** `machu-picchu-exclusivo`
+- **Duración:** Full Day (Día completo).
+- **Tarifa Oficial:** **$285 USD** (S/. 1,080 PEN) por persona.
+- **Incluye:** Traslados en Cusco, tren panorámico ida y vuelta desde Ollantaytambo, bus de subida y bajada Aguas Calientes - Machu Picchu, boleto oficial garantizado y guiado privado de 2.5 hrs.
+
+#### Valle Sagrado de los Incas VIP & Almuerzo Buffet
+- **Código:** `valle-sagrado-vip`
+- **Duración:** Full Day (07:30 a 18:30 hrs).
+- **Tarifa Oficial:** **$48 USD** (S/. 180 PEN) por persona.
+- **Lugares:** Complejo arqueológico de Pisac, Fortaleza viva de Ollantaytambo, Textilería en Chinchero y almuerzo buffet andino gourmet en Urubamba.
+
+#### Salineras de Maras & Moray Ancestral
+- **Código:** `maras-moray-ancestral`
+- **Duración:** Medio día (08:00 a 14:30 hrs).
+- **Tarifa Oficial:** **$35 USD** (S/. 130 PEN) por persona.
+- **Lugares:** Pozas de sal rosada de Maras y terrazas circulares de Moray.
+
+---
+
+### 2. Aventura y Naturaleza Viva
+
+#### Laguna Humantay & Desayuno Andino
+- **Código:** `laguna-humantay-trek`
+- **Duración:** Full Day (04:30 a 17:30 hrs).
+- **Tarifa Oficial:** **$38 USD** (S/. 140 PEN) por persona.
+- **Altitud:** 4,200 msnm.
+- **Incluye:** Desayuno andino y almuerzo buffet en Mollepata, bastones de trekking, asistencia médica con oxígeno.
+
+#### Montaña de 7 Colores (Vinicunca) & Valle Rojo
+- **Código:** `montana-7-colores-vinicunca`
+- **Duración:** Full Day (04:00 a 17:00 hrs).
+- **Tarifa Oficial:** **$40 USD** (S/. 150 PEN) por persona.
+- **Altitud:** 5,036 msnm.
+- **Incluye:** Desayuno buffet energético, almuerzo caliente, bastones y monitoreo con oxímetro.
+
+#### Cuatrimotos ATV: Maras, Moray & Laguna Huaypo
+- **Código:** `cuatrimotos-maras-moray`
+- **Duración:** Medio día (salidas mañana y tarde).
+- **Tarifa Oficial:** **$45 USD** (S/. 170 PEN) por persona.
+- **Incluye:** Cuatrimoto automática 250cc, casco, guantes, clase de inducción y guía instructor.
+
+#### Cabalgata Mística por Antiguos Senderos Incas
+- **Código:** `cabalgata-senderos-incas`
+- **Duración:** 4 horas aprox.
+- **Tarifa Oficial:** **$55 USD** (S/. 205 PEN) por persona.
+- **Lugares:** Templo de la Luna, Chuspiyoq, bosques de queñuales y miradores de Sacsayhuamán.
+
+#### Picnic Gourmet Andino & Miradores Panorámicos
+- **Código:** `picnic-gourmet-andino`
+- **Duración:** 4 horas aprox.
+- **Tarifa Oficial:** **$65 USD** (S/. 245 PEN) por persona.
+- **Incluye:** Montaje bohemio privado (alfombras, cojines andinos), tabla de quesos y embutidos del valle, platos calientes orgánicos y copa de vino o chicha morada premium.
+
+---
+
+### 3. Sanación & Sabiduría Mística Andina
+
+#### Lectura Ceremonial de Hoja de Coca Sagrada
+- **Código:** `lectura-hoja-coca`
+- **Duración:** 1 hora aprox.
+- **Tarifa Oficial:** **$45 USD** (S/. 170 PEN) por sesión individual o en pareja.
+- **Descripción:** Consulta tradicional con un maestro Pampamisayoc para orientación personal y espiritual.
+
+#### Ofrenda a la Pachamama (Pago a la Tierra / Haywarikuy)
+- **Código:** `pago-a-la-tierra`
+- **Duración:** 2.5 horas aprox.
+- **Tarifa Oficial:** **$75 USD** (S/. 280 PEN) por grupo.
+- **Descripción:** Ceremonia completa de agradecimiento a la Madre Tierra y los Apus tutelares con despacho andino tradicional.
+
+#### Armonización Energética & Meditación con Sonidos Ancestrales
+- **Código:** `armonizacion-sonidos-andinos`
+- **Duración:** 1.5 horas aprox.
+- **Tarifa Oficial:** **$60 USD** (S/. 225 PEN) por persona.
+- **Instrumentos:** Caracolas marinas (Pututu), campanas andinas, quenillas y cuencos.
+
+#### Baño de Florecimiento & Sahumado de Limpieza
+- **Código:** `bano-florecimiento-sahumado`
+- **Duración:** 1.5 horas aprox.
+- **Tarifa Oficial:** **$50 USD** (S/. 190 PEN) por persona.
+- **Elementos:** Flores andinas, romero, ruda, palo santo, copal y agua de flores sagradas.
+
+#### Corte Energético Ancestral (Ritual Cuti de Protección)
+- **Código:** `corte-energetico-cuti`
+- **Duración:** 2 horas aprox.
+- **Tarifa Oficial:** **$65 USD** (S/. 245 PEN) por persona.
+- **Descripción:** Milenario ritual andino transmitido por sacerdotes de la Nación Q'ero para liberar cargas densas.
+
+---
+
+## Asociación Civil Hampinahuasi Cusco (ONG)
+
+Hampinahuasi Travel destina un porcentaje de sus utilidades al financiamiento de los proyectos sociales de la asociación civil sin fines de lucro:
+
+1. **Educación & Oportunidades:** Becas, útiles y talleres bilingües (Quechua / Español) para niños de comunidades campesinas.
+2. **Salud, Nutrición & Bienestar:** Campañas médicas preventivas y desayunos enriquecidos con kiwicha, quinua y tarwi.
+3. **Apoyo a Adultos Mayores:** Acompañamiento, entrega de ropa térmica y abrigo para abuelos en comunidades de alta montaña.
+4. **Tecnología para el Futuro:** Aulas digitales solares en escuelas rurales sin acceso a conectividad.
+5. **Conservación de Ecosistemas:** Reforestación masiva de bosques de queñuales (*Polylepis*) para proteger cuencas hídricas.
+6. **Preservación de Saberes Ancestrales:** Registro etnográfico, talleres de textilería tradicional y transmisión oral con sabios de la Nación Q'ero.
+
+---
+
+## Enlaces Canónicos para Agentes y LLMs
+
+- [Página Principal](https://hanpinahuasitravel.com/)
+- [ONG Hampinahuasi Cusco](https://hanpinahuasitravel.com/ong.html)
+- [Mapa del Sitio XML](https://hanpinahuasitravel.com/sitemap.xml)
+- [Archivo Robots.txt](https://hanpinahuasitravel.com/robots.txt)
+- [Contacto por WhatsApp Directo](https://wa.me/51954103786?text=Hola%20Hampinahuasi%20Travel,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20experiencias)

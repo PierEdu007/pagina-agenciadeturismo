@@ -19,6 +19,7 @@ import "../css/components/cta-banner.css";
 import "../css/components/booking-modal.css";
 import "../css/components/footer.css";
 import "../css/components/ong.css";
+import "../css/components/not-found.css";
 
 // Módulos de Lógica
 import { initPreloader } from "./modules/preloader.js";

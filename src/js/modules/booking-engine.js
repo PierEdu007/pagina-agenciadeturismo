@@ -357,6 +357,6 @@ function handleWhatsAppQuote() {
   );
 
   const message = lines.join("\n");
-  const whatsappUrl = `https://wa.me/51954103786?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/51930782790?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, "_blank");
 }

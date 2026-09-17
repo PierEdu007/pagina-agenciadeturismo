@@ -1,0 +1,80 @@
+# ==============================================================================
+# Robots.txt - Hampinahuasi Travel & Hampinahuasi Cusco (ONG)
+# Sitio oficial: https://hanpinahuasitravel.com/
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Buscadores Web Generales (Google, Bing, Yahoo, DuckDuckGo, etc.)
+# ------------------------------------------------------------------------------
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Disallow: /private/
+
+# ------------------------------------------------------------------------------
+# 2. Agentes de Inteligencia Artificial y Motores de Búsqueda LLM
+# Permitidos expresamente para consulta, resúmenes, citas y asistencia
+# ------------------------------------------------------------------------------
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini / Vertex / AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence / Applebot
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# ByteDance / TikTok AI
+User-agent: Bytespider
+Allow: /
+
+# Mistral AI
+User-agent: MistralBot
+Allow: /
+
+# ------------------------------------------------------------------------------
+# 3. Referencias de Rastreo e Inteligencia Artificial
+# ------------------------------------------------------------------------------
+
+# Especificación oficial para Modelos de Lenguaje (LLMs.txt standard)
+LLMs-Txt: https://hanpinahuasitravel.com/llms.txt
+
+# Mapa del sitio XML oficial
+Sitemap: https://hanpinahuasitravel.com/sitemap.xml
