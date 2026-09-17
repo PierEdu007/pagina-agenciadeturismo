@@ -508,27 +508,37 @@
 }
 
 .exp-callout-alert {
-  background: rgba(184, 80, 42, 0.12);
-  border: 1px solid rgba(184, 80, 42, 0.35);
+  background: rgba(200, 90, 50, 0.16);
+  border: 1px solid rgba(255, 158, 122, 0.4);
   border-radius: var(--radius-md);
   padding: 1rem 1.25rem;
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .exp-callout-alert i {
-  color: var(--color-terracotta);
-  font-size: 1.25rem;
-  margin-top: 0.1rem;
+  color: #FF9E7A;
+  font-size: 1.3rem;
+  margin-top: 0.15rem;
   flex-shrink: 0;
+}
+
+.exp-callout-alert strong,
+.exp-callout-alert-title {
+  display: block;
+  color: #FFB088 !important;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.2px;
 }
 
 .exp-callout-alert p {
   margin: 0;
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: #E8CBC0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #FAF0EB;
 }
 
 /* Footer Fijo con Tarifa y Botón de Reserva */

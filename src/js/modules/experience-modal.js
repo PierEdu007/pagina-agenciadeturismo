@@ -286,7 +286,7 @@ export function openExperienceModal(tourId) {
         <div class="exp-callout-alert">
           <i class="fa-solid fa-triangle-exclamation"></i>
           <div>
-            <strong style="display: block; color: var(--color-terracotta-light); margin-bottom: 0.25rem;">Recomendación y Condición Física:</strong>
+            <strong class="exp-callout-alert-title">Recomendación y Condición Física:</strong>
             <p>${tour.important}</p>
           </div>
         </div>
