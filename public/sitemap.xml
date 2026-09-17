@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Página de Inicio / Agencia de Turismo Hampinahuasi Travel -->
   <url>
     <loc>https://hanpinahuasitravel.com/</loc>
     <lastmod>2026-09-16</lastmod>
@@ -8,10 +9,87 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://hanpinahuasitravel.com/images/cusco-plaza-de-armas.webp</image:loc>
-      <image:title>Hampinahuasi Travel Cusco</image:title>
-      <image:caption>Turismo formal, medicina ancestral y experiencias exclusivas en Cusco, Perú</image:caption>
+      <image:title>Plaza de Armas y Catedral del Cusco - Hampinahuasi Travel</image:title>
+      <image:caption>Turismo formal, medicina ancestral y experiencias auténticas en Cusco, Perú.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/fullday-valle-sagrado.webp</image:loc>
+      <image:title>Full Day Valle Sagrado de los Incas en Cusco Perú</image:title>
+      <image:caption>Pisac, Ollantaytambo y terrazas agrícolas incas en el Valle Sagrado.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/laguna-humantay.webp</image:loc>
+      <image:title>Trek Laguna Humantay y Glaciar Salkantay</image:title>
+      <image:caption>Aguas turquesas y vistas imponentes de los glaciares andinos a 4,340 msnm.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/montana-7-colores.webp</image:loc>
+      <image:title>Trek Montaña de 7 Colores (Vinicunca) y Valle Rojo</image:title>
+      <image:caption>Ruta andina hacia la emblemática montaña arcoíris de Cusco.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/moray-salineras.webp</image:loc>
+      <image:title>Laboratorio Agrícola de Moray y Salineras de Maras</image:title>
+      <image:caption>Pozas milenarias de sal y terrazas circulares de experimentación inca.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/city-tour-cusco.webp</image:loc>
+      <image:title>City Tour Arqueológico en Cusco y Fortaleza de Sacsayhuamán</image:title>
+      <image:caption>Recorrido histórico por los templos y fortalezas de la capital incaica.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/cuatrimotos-moray.webp</image:loc>
+      <image:title>Aventura en Cuatrimotos por Moray y Laguna Huaypo</image:title>
+      <image:caption>Ruta panorámica de aventura todoterreno por los parajes del Valle Sagrado.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/cabalgatas-maras.webp</image:loc>
+      <image:title>Cabalgata Ecuestre en Pampas de Maras</image:title>
+      <image:caption>Paseos a caballo de paso peruano entre campos de cultivo y cordilleras nevadas.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/picnic-andino.webp</image:loc>
+      <image:title>Picnic Andino de Autor con Vistas Panorámicas</image:title>
+      <image:caption>Gastronomía de altura con insumos orgánicos andinos y servicio exclusivo.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/lectura-de-coca.webp</image:loc>
+      <image:title>Lectura Sagrada de Hojas de Coca con Maestro Andino</image:title>
+      <image:caption>Consulta espiritual y oráculo ancestral con sacerdotes q'ero en Cusco.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/ritual-pachamama.webp</image:loc>
+      <image:title>Ritual a la Pachamama (Pago a la Tierra - Haywarikuy)</image:title>
+      <image:caption>Ceremonia tradicional de ofrenda y reciprocidad sagrada con la Madre Tierra.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/ritual-apu.webp</image:loc>
+      <image:title>Ritual a los Apus y Espíritus Tutelares de los Andes</image:title>
+      <image:caption>Invocación y permiso sagrado a las montañas tutelares de la cordillera del Vilcanota.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/ritual-limpieza.webp</image:loc>
+      <image:title>Ritual de Limpieza y Purificación Energética</image:title>
+      <image:caption>Sahumerios andinos, campanas y descarga de energías densas (hucha).</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/banos-florecimiento.webp</image:loc>
+      <image:title>Baños de Florecimiento con Plantas Medicinales Andinas</image:title>
+      <image:caption>Alineación espiritual, apertura de caminos y revitalización con esencias naturales.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/ceremonia-sanacion-andina.webp</image:loc>
+      <image:title>Ceremonia de Sanación Holística Andina en Cusco</image:title>
+      <image:caption>Terapia integrativa andina que armoniza cuerpo, mente y espíritu.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/valle-sagrado-arim.webp</image:loc>
+      <image:title>Valle Sagrado Privado y Cascadas de Arín</image:title>
+      <image:caption>Recorrido íntimo fuera de las rutas masivas por los rincones secretos del Valle Sagrado.</image:caption>
     </image:image>
   </url>
+
+  <!-- Página de la ONG / Proyectos Sociales y Sabiduría Hampinahuasi Cusco -->
   <url>
     <loc>https://hanpinahuasitravel.com/ong.html</loc>
     <lastmod>2026-09-16</lastmod>
@@ -19,8 +97,24 @@
     <priority>0.85</priority>
     <image:image>
       <image:loc>https://hanpinahuasitravel.com/images/comunidad-nino-andes.webp</image:loc>
-      <image:title>Asociación Civil Hampinahuasi Cusco (ONG)</image:title>
-      <image:caption>Proyectos comunitarios, medicina ancestral, educación y reforestación andina</image:caption>
+      <image:title>Proyectos de Educación Rural y Comunidad Andina - Hampinahuasi Cusco</image:title>
+      <image:caption>Apoyo directo a niños y familias de comunidades altoandinas de la Nación Q'ero.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/medicina-ancestral-mamita.webp</image:loc>
+      <image:title>Preservación de la Medicina Ancestral y Apoyo a Adultos Mayores</image:title>
+      <image:caption>Resguardo de la sabiduría botánica tradicional y cuidado digno de los abuelos andinos.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/cusco-plaza-de-armas.webp</image:loc>
+      <image:title>Reforestación de Queñuales y Conexión Comunitaria en Cusco</image:title>
+      <image:caption>Siembra de bosques nativos de queñual para proteger las cuencas glaciares de los Andes.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hanpinahuasitravel.com/images/logo-hanpinahuasi.webp</image:loc>
+      <image:title>Emblema Oficial Asociación Civil Hampinahuasi Cusco</image:title>
+      <image:caption>Símbolo del Ayni sagrado y reciprocidad con el pueblo andino.</image:caption>
     </image:image>
   </url>
 </urlset>
+

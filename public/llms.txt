@@ -8,8 +8,8 @@
 - **RUC:** 20608912345
 - **Acreditación:** DIRCETUR Cusco Reg. Nº 4821-2024
 - **Dirección:** Calle Plateros 312, Centro Histórico, Cusco, Perú
-- **Canal Oficial de WhatsApp:** [+51 954 103 786](https://wa.me/51954103786)
-- **Atención Telefónica:** +51 954 103 786
+- **Canal Oficial de WhatsApp:** [+51 930 782 790](https://wa.me/51930782790)
+- **Atención Telefónica:** +51 930 782 790
 - **Correo Reservas:** reservas@hanpinahuasitravel.com
 - **Correo ONG:** ong@hanpinahuasitravel.com
 - **Horario de Atención:** Lunes a Domingo, de 06:00 a 21:00 (Hora de Perú, UTC-5)
@@ -148,4 +148,4 @@ Hampinahuasi Travel destina un porcentaje de sus utilidades al financiamiento de
 - [ONG Hampinahuasi Cusco](https://hanpinahuasitravel.com/ong.html)
 - [Mapa del Sitio XML](https://hanpinahuasitravel.com/sitemap.xml)
 - [Archivo Robots.txt](https://hanpinahuasitravel.com/robots.txt)
-- [Contacto por WhatsApp Directo](https://wa.me/51954103786?text=Hola%20Hampinahuasi%20Travel,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20experiencias)
+- [Contacto por WhatsApp Directo](https://wa.me/51930782790?text=Hola%20Hampinahuasi%20Travel,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20experiencias)
