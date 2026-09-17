@@ -280,97 +280,39 @@ body.nav-open {
   overflow: hidden;
 }
 
-/* ======================================
-   Responsive Tablet & Pantallas Medianas (961px - 1170px)
-   Muestra en la barra: Logo + Experiencias + ONG + Cambio de Dólar + Menú Hamburguesa
-   ====================================== */
-@media (min-width: 961px) and (max-width: 1170px) {
-  .header-wrapper {
-    padding: 0.75rem 1.25rem;
-  }
-
-  .header-wrapper.scrolled {
-    padding: 0.5rem 1rem;
-  }
-
-  .navbar {
-    padding: 0.5rem 0.85rem 0.5rem 1.25rem;
-    gap: 1rem;
-  }
-
-  .logo {
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-    gap: 0.55rem;
-  }
-
-  .logo-img {
-    width: 38px;
-    height: 38px;
-  }
-
-  /* Menú horizontal en la barra: mostrar únicamente Experiencias y ONG */
-  .nav-menu:not(.open) {
-    display: flex !important;
-    align-items: center;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-  }
-
-  .nav-menu:not(.open) .nav-item-secondary,
-  .nav-menu:not(.open) .mobile-nav-cta {
-    display: none !important;
-  }
-
-  .nav-menu:not(.open) .nav-item-exp,
-  .nav-menu:not(.open) .nav-item-ong {
-    display: block !important;
-  }
-
-  .nav-menu:not(.open) .nav-link {
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
-    padding: 0.25rem 0;
-  }
-
-  /* Acciones: selector de divisa visible, botón reservar oculto, botón hamburguesa activo */
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .currency-toggle {
-    display: inline-flex !important;
-  }
-
+/* ===================================================
+   Reglas Comunes para Dispositivos y Pantallas <= 1270px
+   (Cajón lateral, botón hamburguesa, overlay)
+   =================================================== */
+@media (max-width: 1270px) {
+  /* Eliminar botón reservar del navbar flotante en <= 1270px */
   .nav-actions .btn-primary.btn-sm,
   .nav-actions .btn-nav-reserve {
     display: none !important;
   }
 
+  /* Botón hamburguesa visible */
   .mobile-toggle {
     display: block !important;
   }
 
+  /* Overlay visible */
   .nav-overlay {
     display: block;
   }
 
-  /* Cajón lateral al abrir el menú hamburguesa */
+  /* Cajón lateral deslizable al abrir el menú hamburguesa */
   .nav-menu.open {
     position: fixed !important;
     top: 0;
     right: 0;
-    width: 80%;
-    max-width: 340px;
+    width: 82%;
+    max-width: 330px;
     height: 100vh;
     height: 100dvh;
     background: #101614;
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: column !important;
+    align-items: stretch !important;
     padding: 4.75rem 1.75rem 2.5rem;
     gap: 0;
     box-shadow: -8px 0 35px rgba(0, 0, 0, 0.75);
@@ -382,8 +324,12 @@ body.nav-open {
     pointer-events: auto !important;
     overflow-y: auto;
     transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.35s;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
+  /* En el cajón abierto, TODOS los enlaces se muestran verticalmente */
   .nav-menu.open > li {
     display: block !important;
     opacity: 1 !important;
@@ -391,6 +337,14 @@ body.nav-open {
     -webkit-transform: translate3d(0, 0, 0) !important;
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
+
+  /* Entrada escalonada de items */
+  .nav-menu.open > li:nth-child(1) { transition-delay: 0.05s; }
+  .nav-menu.open > li:nth-child(2) { transition-delay: 0.10s; }
+  .nav-menu.open > li:nth-child(3) { transition-delay: 0.15s; }
+  .nav-menu.open > li:nth-child(4) { transition-delay: 0.20s; }
+  .nav-menu.open > li:nth-child(5) { transition-delay: 0.25s; }
+  .nav-menu.open > li:nth-child(6) { transition-delay: 0.30s; }
 
   .nav-menu.open .nav-link {
     font-size: 1.08rem;
@@ -414,10 +368,218 @@ body.nav-open {
   }
 }
 
-/* ======================================
-   Responsive Mobile Nav (<= 960px)
-   ====================================== */
-@media (max-width: 960px) {
+/* ===================================================
+   Rango 1: Pantallas de 1001px a 1270px
+   Muestra en la barra: Experiencias + Por qué Hanpinahuasi + Galería + ONG + Cambio de Dólar + Menú Hamburguesa
+   =================================================== */
+@media (min-width: 1001px) and (max-width: 1270px) {
+  .header-wrapper {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .header-wrapper.scrolled {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar {
+    padding: 0.5rem 0.85rem 0.5rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .logo {
+    font-size: 1.22rem;
+    letter-spacing: 0.4px;
+    gap: 0.55rem;
+  }
+
+  .logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .nav-menu:not(.open) {
+    display: flex !important;
+    align-items: center;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+  }
+
+  /* Ocultar items secundarios en la barra para este rango */
+  .nav-menu:not(.open) > li {
+    display: none !important;
+  }
+
+  /* Mostrar: Experiencias, Por qué Hanpinahuasi, Galería, ONG */
+  .nav-menu:not(.open) > li.nav-item-exp,
+  .nav-menu:not(.open) > li.nav-item-why,
+  .nav-menu:not(.open) > li.nav-item-gallery,
+  .nav-menu:not(.open) > li.nav-item-ong {
+    display: block !important;
+  }
+
+  .nav-menu:not(.open) .nav-link {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.2rem 0;
+    white-space: nowrap;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .currency-toggle {
+    display: inline-flex !important;
+  }
+}
+
+/* ===================================================
+   Rango 2: Pantallas de 851px a 1000px
+   Muestra en la barra: Experiencias + Por qué Hanpinahuasi + ONG + Cambio de Dólar + Menú Hamburguesa
+   =================================================== */
+@media (min-width: 851px) and (max-width: 1000px) {
+  .header-wrapper {
+    padding: 0.6rem 1rem;
+  }
+
+  .header-wrapper.scrolled {
+    padding: 0.4rem 0.75rem;
+  }
+
+  .navbar {
+    padding: 0.45rem 0.75rem 0.45rem 1.15rem;
+    gap: 0.85rem;
+  }
+
+  .logo {
+    font-size: 1.15rem;
+    letter-spacing: 0.3px;
+    gap: 0.5rem;
+  }
+
+  .logo-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-menu:not(.open) {
+    display: flex !important;
+    align-items: center;
+    gap: 1.15rem;
+    list-style: none;
+    margin: 0;
+  }
+
+  .nav-menu:not(.open) > li {
+    display: none !important;
+  }
+
+  /* Mostrar: Experiencias, Por qué Hanpinahuasi, ONG */
+  .nav-menu:not(.open) > li.nav-item-exp,
+  .nav-menu:not(.open) > li.nav-item-why,
+  .nav-menu:not(.open) > li.nav-item-ong {
+    display: block !important;
+  }
+
+  .nav-menu:not(.open) .nav-link {
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.2rem 0;
+    white-space: nowrap;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .currency-toggle {
+    display: inline-flex !important;
+  }
+}
+
+/* ===================================================
+   Rango 3: Pantallas de 700px a 850px
+   Muestra en la barra: Experiencias + ONG + Cambio de Dólar + Menú Hamburguesa
+   =================================================== */
+@media (min-width: 700px) and (max-width: 850px) {
+  .header-wrapper {
+    padding: 0.5rem 0.85rem;
+  }
+
+  .header-wrapper.scrolled {
+    padding: 0.35rem 0.65rem;
+  }
+
+  .navbar {
+    padding: 0.45rem 0.65rem 0.45rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    letter-spacing: 0.3px;
+    gap: 0.45rem;
+  }
+
+  .logo-img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .nav-menu:not(.open) {
+    display: flex !important;
+    align-items: center;
+    gap: 1.1rem;
+    list-style: none;
+    margin: 0;
+  }
+
+  .nav-menu:not(.open) > li {
+    display: none !important;
+  }
+
+  /* Mostrar: Experiencias y ONG */
+  .nav-menu:not(.open) > li.nav-item-exp,
+  .nav-menu:not(.open) > li.nav-item-ong {
+    display: block !important;
+  }
+
+  .nav-menu:not(.open) .nav-link {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.2rem 0;
+    white-space: nowrap;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .currency-toggle {
+    display: inline-flex !important;
+  }
+
+  .currency-btn {
+    padding: 0.2rem 0.45rem;
+    font-size: 0.72rem;
+  }
+}
+
+/* ===================================================
+   Rango 4: Dispositivos Móviles (< 700px)
+   Solo Logo + Cambio de Dólar + Menú Hamburguesa
+   =================================================== */
+@media (max-width: 699px) {
   .header-wrapper {
     padding: 0.5rem 0.75rem;
   }
@@ -452,6 +614,11 @@ body.nav-open {
     }
   }
 
+  /* Ocultar menú horizontal en móvil */
+  .nav-menu:not(.open) {
+    display: none !important;
+  }
+
   .nav-actions {
     gap: 0.5rem;
   }
@@ -464,111 +631,11 @@ body.nav-open {
     padding: 0.2rem 0.4rem;
     font-size: 0.68rem;
   }
-
-  /* Eliminar botón reservar del navbar flotante en todos los dispositivos móviles */
-  .nav-actions .btn-primary.btn-sm,
-  .nav-actions .btn-nav-reserve {
-    display: none !important;
-  }
-
-  /* Botón hamburguesa visible */
-  .mobile-toggle {
-    display: block;
-  }
-
-  /* Overlay visible en viewport móvil */
-  .nav-overlay {
-    display: block;
-  }
-
-  /* Menú lateral deslizable - Nítido, fondo sólido andino sin blur borroso */
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 82%;
-    max-width: 320px;
-    height: 100vh;
-    height: 100dvh;
-    background: #101614;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 4.75rem 1.75rem 2.5rem;
-    gap: 0;
-    box-shadow: -8px 0 35px rgba(0, 0, 0, 0.75);
-    border-left: 1px solid rgba(255, 255, 255, 0.12);
-    z-index: 1005;
-    transform: translate3d(100%, 0, 0);
-    -webkit-transform: translate3d(100%, 0, 0);
-    visibility: hidden;
-    pointer-events: none;
-    transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.35s;
-    overflow-y: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-  }
-
-  .nav-menu.open {
-    visibility: visible;
-    pointer-events: auto;
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-  }
-
-  /* Enlaces del menú móvil con animación fluida */
-  .nav-menu > li {
-    opacity: 0;
-    transform: translate3d(24px, 0, 0);
-    -webkit-transform: translate3d(24px, 0, 0);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .nav-menu.open > li {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-  }
-
-  /* Entrada escalonada de items */
-  .nav-menu.open > li:nth-child(1) { transition-delay: 0.06s; }
-  .nav-menu.open > li:nth-child(2) { transition-delay: 0.12s; }
-  .nav-menu.open > li:nth-child(3) { transition-delay: 0.18s; }
-  .nav-menu.open > li:nth-child(4) { transition-delay: 0.24s; }
-  .nav-menu.open > li:nth-child(5) { transition-delay: 0.30s; }
-  .nav-menu.open > li:nth-child(6) { transition-delay: 0.36s; }
-
-  /* Salida inmediata al cerrar */
-  .nav-menu > li {
-    transition-delay: 0s;
-  }
-
-  .nav-menu .nav-link {
-    font-size: 1.08rem;
-    font-family: var(--font-display);
-    color: rgba(255, 255, 255, 0.9);
-    display: block;
-    padding: 0.85rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    transition: color var(--transition-fast), padding-left var(--transition-fast);
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .nav-menu .nav-link:hover,
-  .nav-menu .nav-link:active {
-    color: var(--color-gold);
-    padding-left: 0.5rem;
-  }
-
-  .mobile-nav-cta {
-    display: block !important;
-    margin-top: 1.5rem;
-  }
 }
 
-/* ======================================
-   Pantallas extra pequeñas (<= 360px)
-   ====================================== */
+/* ===================================================
+   Pantallas ultra pequeñas (<= 360px)
+   =================================================== */
 @media (max-width: 360px) {
   .navbar {
     padding: 0.3rem 0.3rem 0.3rem 0.55rem;
@@ -585,7 +652,7 @@ body.nav-open {
   }
 
   .currency-toggle {
-    display: none;
+    display: none !important;
   }
 
   .mobile-toggle {
