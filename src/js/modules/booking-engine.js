@@ -7,6 +7,7 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import { TOURS_DATA } from "../../data/tours.js";
 import { getCurrentCurrency, formatPrice } from "./currency.js";
+import { stopLenis, startLenis } from "./scroll-effects.js";
 
 let bookingState = {
   tourId: null,
@@ -35,6 +36,24 @@ export function initBookingEngine() {
       closeBookingDrawer();
     }
   });
+
+  // Delegar scroll con rueda del ratón si el cursor está sobre el fondo oscuro
+  backdrop.addEventListener(
+    "wheel",
+    (e) => {
+      if (!backdrop.classList.contains("is-open")) return;
+      const drawer = backdrop.querySelector(".booking-drawer");
+      if (!drawer) return;
+      if (e.target === backdrop) {
+        e.preventDefault();
+        drawer.scrollBy({
+          top: e.deltaY,
+          behavior: "auto"
+        });
+      }
+    },
+    { passive: false }
+  );
 
   // Cerrar con Escape
   window.addEventListener("keydown", (e) => {
@@ -151,6 +170,7 @@ export function openBookingDrawer(tourId) {
 
   // Recalcular y abrir
   recalculateTotals();
+  stopLenis();
   backdrop.style.display = "flex";
   void backdrop.offsetWidth; // Forzar reflow para que la animación CSS corra suavemente
   backdrop.classList.add("is-open");
@@ -163,6 +183,7 @@ export function closeBookingDrawer() {
 
   backdrop.classList.remove("is-open");
   document.body.style.overflow = "";
+  startLenis();
   setTimeout(() => {
     if (!backdrop.classList.contains("is-open")) {
       backdrop.style.display = "none";

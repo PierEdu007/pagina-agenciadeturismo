@@ -728,8 +728,8 @@
   </section>
 
   <!-- Modal Lightbox Cinematográfico para Álbum Pinterest -->
-  <div class="lightbox-modal" id="gallery-lightbox-modal" aria-hidden="true">
-    <div class="lightbox-dialog" role="dialog" aria-modal="true">
+  <div class="lightbox-modal" id="gallery-lightbox-modal" data-lenis-prevent aria-hidden="true">
+    <div class="lightbox-dialog" data-lenis-prevent role="dialog" aria-modal="true">
       <button class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Cerrar vista de fotografía">
         <i class="fa-solid fa-xmark"></i>
       </button>
@@ -814,15 +814,15 @@
   </section>
 
   <!-- Modal Interactivo Cinematográfico: Ficha de Experiencia (Ver Experiencia) -->
-  <div class="exp-modal-backdrop" id="experience-modal-backdrop" aria-hidden="true">
-    <div class="exp-modal-dialog" id="experience-modal-dialog" role="dialog" aria-modal="true">
+  <div class="exp-modal-backdrop" id="experience-modal-backdrop" data-lenis-prevent aria-hidden="true">
+    <div class="exp-modal-dialog" id="experience-modal-dialog" data-lenis-prevent role="dialog" aria-modal="true">
       <!-- Inyectado dinámicamente por src/js/modules/experience-modal.js -->
     </div>
   </div>
 
   <!-- Modal / Drawer Interactivo de Pre-Reserva (Preparado para Culqi) -->
-  <div class="booking-modal-backdrop" id="booking-modal-backdrop" style="display: none;" aria-hidden="true">
-    <div class="booking-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+  <div class="booking-modal-backdrop" id="booking-modal-backdrop" data-lenis-prevent style="display: none;" aria-hidden="true">
+    <div class="booking-drawer" data-lenis-prevent role="dialog" aria-modal="true" aria-labelledby="drawer-title">
       <!-- Encabezado del Drawer -->
       <div class="drawer-header">
         <h3 id="drawer-title">

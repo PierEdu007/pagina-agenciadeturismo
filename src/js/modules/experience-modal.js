@@ -6,6 +6,7 @@
 import { TOURS_DATA } from "../../data/tours.js";
 import { getCurrentCurrency, formatPrice } from "./currency.js";
 import { openBookingDrawer } from "./booking-engine.js";
+import { stopLenis, startLenis } from "./scroll-effects.js";
 
 let activeTourId = null;
 
@@ -20,12 +21,76 @@ export function initExperienceModal() {
     }
   });
 
-  // Cerrar con Escape
+  // Navegación por teclado (Escape y flechas de scroll)
   window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && backdrop.classList.contains("is-open")) {
+    if (!backdrop.classList.contains("is-open")) return;
+    if (e.key === "Escape") {
       closeExperienceModal();
+      return;
+    }
+    const scrollContainer = backdrop.querySelector(".exp-modal-content-scroll");
+    if (!scrollContainer) return;
+
+    if (e.key === "ArrowDown") {
+      scrollContainer.scrollBy({ top: 80, behavior: "smooth" });
+    } else if (e.key === "ArrowUp") {
+      scrollContainer.scrollBy({ top: -80, behavior: "smooth" });
+    } else if (e.key === "PageDown") {
+      scrollContainer.scrollBy({ top: 320, behavior: "smooth" });
+    } else if (e.key === "PageUp") {
+      scrollContainer.scrollBy({ top: -320, behavior: "smooth" });
     }
   });
+
+  // Delegación de scroll con rueda del ratón (mouse wheel) en todo el modal
+  backdrop.addEventListener(
+    "wheel",
+    (e) => {
+      if (!backdrop.classList.contains("is-open")) return;
+      const scrollContainer = backdrop.querySelector(".exp-modal-content-scroll");
+      if (!scrollContainer) return;
+
+      // Si el cursor está sobre la cabecera (hero), footer, bordes o backdrop
+      if (!scrollContainer.contains(e.target)) {
+        e.preventDefault();
+        scrollContainer.scrollBy({
+          top: e.deltaY,
+          behavior: "auto"
+        });
+      }
+    },
+    { passive: false }
+  );
+
+  // Desplazamiento táctil (touch drag) sobre áreas estáticas del modal en móviles
+  let touchStartY = 0;
+  backdrop.addEventListener(
+    "touchstart",
+    (e) => {
+      if (!backdrop.classList.contains("is-open")) return;
+      if (e.touches && e.touches[0]) {
+        touchStartY = e.touches[0].clientY;
+      }
+    },
+    { passive: true }
+  );
+
+  backdrop.addEventListener(
+    "touchmove",
+    (e) => {
+      if (!backdrop.classList.contains("is-open")) return;
+      const scrollContainer = backdrop.querySelector(".exp-modal-content-scroll");
+      if (!scrollContainer || !e.touches || !e.touches[0]) return;
+
+      if (!scrollContainer.contains(e.target)) {
+        const currentY = e.touches[0].clientY;
+        const diffY = touchStartY - currentY;
+        scrollContainer.scrollTop += diffY;
+        touchStartY = currentY;
+      }
+    },
+    { passive: true }
+  );
 
   // Escuchar cambios de divisa para actualizar el footer si el modal está abierto
   window.addEventListener("currency-change", () => {
@@ -68,7 +133,7 @@ export function openExperienceModal(tourId) {
     </div>
 
     <!-- Contenido Detallado Scrolleable -->
-    <div class="exp-modal-content-scroll">
+    <div class="exp-modal-content-scroll" data-lenis-prevent tabindex="0">
       
       <!-- Cuadrícula de Métricas Clave -->
       <div class="exp-meta-grid">
@@ -258,9 +323,18 @@ export function openExperienceModal(tourId) {
     openBookingDrawer(tour.id);
   });
 
-  // Abrir modal
+  // Abrir modal con bloqueo seguro de scroll de fondo y habilitación de scroll interno
+  stopLenis();
   backdrop.classList.add("is-open");
   document.body.style.overflow = "hidden";
+
+  // Reenfocar contenedor scrolleable para teclado
+  setTimeout(() => {
+    const scrollContainer = backdrop.querySelector(".exp-modal-content-scroll");
+    if (scrollContainer) {
+      scrollContainer.scrollTop = 0;
+    }
+  }, 50);
 }
 
 export function closeExperienceModal() {
@@ -268,6 +342,7 @@ export function closeExperienceModal() {
   if (!backdrop) return;
   backdrop.classList.remove("is-open");
   document.body.style.overflow = "";
+  startLenis();
   activeTourId = null;
 }
 

@@ -4,13 +4,50 @@
 
 import Lenis from "lenis";
 
+let lenisInstance = null;
+
+export function getLenis() {
+  return lenisInstance;
+}
+
+export function stopLenis() {
+  if (lenisInstance) {
+    lenisInstance.stop();
+  }
+}
+
+export function startLenis() {
+  if (lenisInstance) {
+    lenisInstance.start();
+  }
+}
+
 export function initScrollEffects() {
-  // Inicializar Lenis para scroll ultra suave
+  // Inicializar Lenis para scroll ultra suave permitiendo scroll nativo en modales
   const lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     smoothWheel: true,
+    allowNestedScroll: true,
+    prevent: (node) => {
+      if (!node || !(node instanceof HTMLElement)) return false;
+      return (
+        node.hasAttribute("data-lenis-prevent") ||
+        node.hasAttribute("data-lenis-prevent-wheel") ||
+        Boolean(node.closest("[data-lenis-prevent]")) ||
+        Boolean(node.closest(".exp-modal-backdrop")) ||
+        Boolean(node.closest(".exp-modal-dialog")) ||
+        Boolean(node.closest(".exp-modal-content-scroll")) ||
+        Boolean(node.closest(".booking-modal-backdrop")) ||
+        Boolean(node.closest(".booking-drawer")) ||
+        Boolean(node.closest(".lightbox-modal")) ||
+        Boolean(node.closest(".lightbox-dialog")) ||
+        Boolean(node.closest(".nav-menu"))
+      );
+    }
   });
+
+  lenisInstance = lenis;
 
   function raf(time) {
     lenis.raf(time);

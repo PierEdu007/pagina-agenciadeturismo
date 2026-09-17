@@ -4,6 +4,7 @@
  */
 
 import { openExperienceModal } from "./experience-modal.js";
+import { stopLenis, startLenis } from "./scroll-effects.js";
 
 export function initGallery() {
   const filterPills = document.querySelectorAll(".gallery-filter-pill");
@@ -90,6 +91,7 @@ export function initGallery() {
   // Funciones del Lightbox
   function openLightbox() {
     if (!lightbox) return;
+    stopLenis();
     lightbox.classList.add("is-open");
     document.body.style.overflow = "hidden";
   }
@@ -98,6 +100,7 @@ export function initGallery() {
     if (!lightbox) return;
     lightbox.classList.remove("is-open");
     document.body.style.overflow = "";
+    startLenis();
   }
 
   if (lightboxCloseBtn) {

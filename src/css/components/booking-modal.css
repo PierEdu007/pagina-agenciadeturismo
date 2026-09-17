@@ -10,6 +10,7 @@
   display: none;
   transition: opacity var(--transition-normal);
   justify-content: flex-end;
+  overscroll-behavior: contain;
 }
 
 .booking-modal-backdrop.is-open {
@@ -27,7 +28,12 @@
   transform: translateX(100%);
   transition: transform var(--transition-normal);
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) rgba(0, 0, 0, 0.08);
 }
 
 .booking-modal-backdrop.is-open .booking-drawer {
