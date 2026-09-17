@@ -28,6 +28,7 @@ import { initCarousel } from "./modules/carousel.js";
 import { initScrollEffects } from "./modules/scroll-effects.js";
 import { initBookingEngine } from "./modules/booking-engine.js";
 import { initExperienceModal } from "./modules/experience-modal.js";
+import { initGallery } from "./modules/gallery.js";
 
 // Inicializar Preloader inmediatamente
 initPreloader();
@@ -42,6 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Inicializar modal de detalle de experiencia
   initExperienceModal();
+
+  // Inicializar álbum Pinterest y Lightbox
+  initGallery();
 
   // Inicializar motor de reserva y modal Culqi
   initBookingEngine();
