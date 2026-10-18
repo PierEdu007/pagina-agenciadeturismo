@@ -1,20 +1,20 @@
-# Hampinahuasi Travel & Hampinahuasi Cusco (ONG)
+# Hanpinawasi Travel & Hanpinawasi Cusco (ONG)
 
-> Operador turístico formal en Cusco, Perú (RUC: 20608912345, DIRCETUR Reg. Nº 4821-2024), especializado en turismo cultural, trekking de aventura y vivencias místicas de medicina ancestral andina. Operamos en grupos reducidos y servicios 100% privados. Vinculados con la Asociación Civil Hampinahuasi Cusco para impulsar proyectos de salud, educación y reforestación andina bajo el principio sagrado del Ayni (reciprocidad).
+> Operador turístico formal en Cusco, Perú (RUC: 20608912345, DIRCETUR Reg. Nº 4821-2024), especializado en turismo cultural, trekking de aventura y vivencias místicas de medicina ancestral andina. Operamos en grupos reducidos y servicios 100% privados. Vinculados con la Asociación Civil Hanpinawasi Cusco para impulsar proyectos de salud, educación y reforestación andina bajo el principio sagrado del Ayni (reciprocidad).
 
 ## Información General y Contacto Oficial
 
-- **Razón Social:** Hampinahuasi Travel S.A.C.
+- **Razón Social:** Hanpinawasi Travel S.A.C.
 - **RUC:** 20608912345
 - **Acreditación:** DIRCETUR Cusco Reg. Nº 4821-2024
 - **Dirección:** Calle Plateros 312, Centro Histórico, Cusco, Perú
 - **Canal Oficial de WhatsApp:** [+51 930 782 790](https://wa.me/51930782790)
 - **Atención Telefónica:** +51 930 782 790
-- **Correo Reservas:** reservas@hanpinahuasitravel.com
-- **Correo ONG:** ong@hanpinahuasitravel.com
+- **Correo Reservas:** reservas@hanpinawasitravel.com
+- **Correo ONG:** ong@hanpinawasitravel.com
 - **Horario de Atención:** Lunes a Domingo, de 06:00 a 21:00 (Hora de Perú, UTC-5)
-- **Sitio Web Principal:** https://hanpinahuasitravel.com/
-- **Página de la ONG:** https://hanpinahuasitravel.com/ong.html
+- **Sitio Web Principal:** https://hanpinawasitravel.com/
+- **Página de la ONG:** https://hanpinawasitravel.com/ong.html
 
 ---
 
@@ -129,9 +129,9 @@ Todas las experiencias cuentan con transporte turístico autorizado, botiquín d
 
 ---
 
-## Asociación Civil Hampinahuasi Cusco (ONG)
+## Asociación Civil Hanpinawasi Cusco (ONG)
 
-Hampinahuasi Travel destina un porcentaje de sus utilidades al financiamiento de los proyectos sociales de la asociación civil sin fines de lucro:
+Hanpinawasi Travel destina un porcentaje de sus utilidades al financiamiento de los proyectos sociales de la asociación civil sin fines de lucro:
 
 1. **Educación & Oportunidades:** Becas, útiles y talleres bilingües (Quechua / Español) para niños de comunidades campesinas.
 2. **Salud, Nutrición & Bienestar:** Campañas médicas preventivas y desayunos enriquecidos con kiwicha, quinua y tarwi.
@@ -144,8 +144,8 @@ Hampinahuasi Travel destina un porcentaje de sus utilidades al financiamiento de
 
 ## Enlaces Canónicos para Agentes y LLMs
 
-- [Página Principal](https://hanpinahuasitravel.com/)
-- [ONG Hampinahuasi Cusco](https://hanpinahuasitravel.com/ong.html)
-- [Mapa del Sitio XML](https://hanpinahuasitravel.com/sitemap.xml)
-- [Archivo Robots.txt](https://hanpinahuasitravel.com/robots.txt)
-- [Contacto por WhatsApp Directo](https://wa.me/51930782790?text=Hola%20Hampinahuasi%20Travel,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20experiencias)
+- [Página Principal](https://hanpinawasitravel.com/)
+- [ONG Hanpinawasi Cusco](https://hanpinawasitravel.com/ong.html)
+- [Mapa del Sitio XML](https://hanpinawasitravel.com/sitemap.xml)
+- [Archivo Robots.txt](https://hanpinawasitravel.com/robots.txt)
+- [Contacto por WhatsApp Directo](https://wa.me/51930782790?text=Hola%20Hanpinawasi%20Travel,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20experiencias)

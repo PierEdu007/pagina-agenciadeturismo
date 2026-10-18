@@ -453,7 +453,7 @@ function handleWhatsAppQuote() {
     .filter(Boolean);
 
   const lines = [
-    `Hola Hanpinahuasi Travel, solicito confirmación de reserva formal:`,
+    `Hola Hanpinawasi Travel, solicito confirmación de reserva formal:`,
     `*Tour:* ${bookingState.tour.title}`,
     `*Fecha Prevista:* ${bookingState.date || "Por definir"}`,
     `*Pasajeros:* ${bookingState.adults} Adulto(s)${bookingState.children > 0 ? `, ${bookingState.children} Niño(s)` : ""}`

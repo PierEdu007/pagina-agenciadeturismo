@@ -1,6 +1,6 @@
 # ==============================================================================
-# Robots.txt - Hampinahuasi Travel & Hampinahuasi Cusco (ONG)
-# Sitio oficial: https://hanpinahuasitravel.com/
+# Robots.txt - Hanpinawasi Travel & Hanpinawasi Cusco (ONG)
+# Sitio oficial: https://hanpinawasitravel.com/
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
@@ -74,7 +74,7 @@ Allow: /
 # ------------------------------------------------------------------------------
 
 # Especificación oficial para Modelos de Lenguaje (LLMs.txt standard)
-LLMs-Txt: https://hanpinahuasitravel.com/llms.txt
+LLMs-Txt: https://hanpinawasitravel.com/llms.txt
 
 # Mapa del sitio XML oficial
-Sitemap: https://hanpinahuasitravel.com/sitemap.xml
+Sitemap: https://hanpinawasitravel.com/sitemap.xml

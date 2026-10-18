@@ -1,12 +1,12 @@
-# Hanpinahuasi Travel - Plataforma Web Oficial
+# Hanpinawasi Travel - Plataforma Web Oficial
 
-Plataforma web oficial y landing page interactiva de **Hanpinahuasi Travel**, agencia y operador turístico formal con sede en la ciudad del Cusco, Perú. Especializada en turismo vivencial, medicina ancestral andina y expediciones exclusivas en grupos reducidos y servicios privados hacia Machu Picchu y las rutas sagradas de los Andes.
+Plataforma web oficial y landing page interactiva de **Hanpinawasi Travel**, agencia y operador turístico formal con sede en la ciudad del Cusco, Perú. Especializada en turismo vivencial, medicina ancestral andina y expediciones exclusivas en grupos reducidos y servicios privados hacia Machu Picchu y las rutas sagradas de los Andes.
 
 ---
 
 ## Significado Cultural & Identidad
 * **Hanpi:** En quechua significa *medicina, curación, sanación sagrada*.
-* **Huasi / Wasi:** En quechua significa *casa, hogar, templo acogedor*.
+* **Wasi:** En quechua significa *casa, hogar, templo acogedor*.
 * **Concepto:** *La Casa de la Sanación y Experiencias Ancestrales*.
 
 ---
@@ -73,11 +73,11 @@ pagina-agenciadeturismo/
 ---
 
 ## Redes Sociales Oficiales
-* **Instagram:** [https://www.instagram.com/hanpinahuasicusco/](https://www.instagram.com/hanpinahuasicusco/)
-* **Facebook:** [https://www.facebook.com/hanpinahuasicusco?locale=es_LA](https://www.facebook.com/hanpinahuasicusco?locale=es_LA)
+* **Instagram:** [https://www.instagram.com/hanpinawasicusco/](https://www.instagram.com/hanpinawasicusco/)
+* **Facebook:** [https://www.facebook.com/hanpinawasicusco?locale=es_LA](https://www.facebook.com/hanpinawasicusco?locale=es_LA)
 
 ---
 
 ## Licencia y Propiedad
-Todos los derechos reservados © 2026 Hanpinahuasi Travel E.I.R.L. - Cusco, Perú.
+Todos los derechos reservados © 2026 Hanpinawasi Travel S.A.C. - Cusco, Perú.
 Registro DIRCETUR Nº: 4821-2024.

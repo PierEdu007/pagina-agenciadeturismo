@@ -1,5 +1,5 @@
 /**
- * Punto de Entrada para la Asociación Civil Hampinahuasi Cusco (ONG)
+ * Punto de Entrada para la Asociación Civil Hanpinawasi Cusco (ONG)
  * Versión Ultra-Optimizada y Liviana (Sin Swiper, Flatpickr ni Catálogo de Tours)
  */
 

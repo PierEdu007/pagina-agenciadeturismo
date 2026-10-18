@@ -1,6 +1,6 @@
 /**
  * Renderizador de Tarjetas de Experiencias y Filtros de Categoría
- * Hampinahuasi Travel S.A.C.
+ * Hanpinawasi Travel S.A.C.
  */
 
 import { TOURS_DATA, TOUR_CATEGORIES } from "../../data/tours.js";

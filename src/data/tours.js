@@ -1,6 +1,6 @@
 /**
  * Catálogo Oficial de Experiencias y Tours
- * Hampinahuasi Travel S.A.C. - Cusco, Perú
+ * Hanpinawasi Travel S.A.C. - Cusco, Perú
  * Salidas garantizadas desde la ciudad del Cusco
  */
 

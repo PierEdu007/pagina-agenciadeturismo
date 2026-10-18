@@ -1,6 +1,6 @@
 /**
  * Inicialización y Gestión del Swiper Carousel
- * Hampinahuasi Travel S.A.C.
+ * Hanpinawasi Travel S.A.C.
  */
 
 import Swiper from "swiper";

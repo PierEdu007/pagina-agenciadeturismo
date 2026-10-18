@@ -1,6 +1,6 @@
 /**
  * Controlador de Álbum Dinámico estilo Pinterest y Visor Lightbox
- * Hampinahuasi Travel S.A.C.
+ * Hanpinawasi Travel S.A.C.
  */
 
 import { openExperienceModal } from "./experience-modal.js";
@@ -65,7 +65,7 @@ export function initGallery() {
 
       if (lightbox && lightboxImg && img) {
         lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt || title || "Fotografía de la experiencia en Cusco - Hampinahuasi Travel";
+        lightboxImg.alt = img.alt || title || "Fotografía de la experiencia en Cusco - Hanpinawasi Travel";
         if (lightboxTitle) lightboxTitle.textContent = title;
         if (lightboxCaption) lightboxCaption.textContent = caption;
 

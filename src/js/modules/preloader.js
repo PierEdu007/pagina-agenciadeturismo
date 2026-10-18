@@ -1,6 +1,6 @@
 /**
  * Gestor del Loading Screen / Preloader & Skeleton Transitions
- * Hampinahuasi Travel S.A.C.
+ * Hanpinawasi Travel S.A.C.
  */
 
 export function initPreloader() {

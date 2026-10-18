@@ -1,6 +1,6 @@
 /**
  * Controlador de Modal de Detalle de Experiencia y Ficha Técnica
- * Hampinahuasi Travel S.A.C.
+ * Hanpinawasi Travel S.A.C.
  */
 
 import { TOURS_DATA } from "../../data/tours.js";
@@ -116,7 +116,7 @@ export function openExperienceModal(tourId) {
   dialog.innerHTML = `
     <!-- Hero con Imagen y Badges -->
     <div class="exp-modal-hero">
-      <img src="${tour.image}" alt="${tour.title} en Cusco Perú - Hampinahuasi Travel" class="exp-modal-hero-img" decoding="async" />
+      <img src="${tour.image}" alt="${tour.title} en Cusco Perú - Hanpinawasi Travel" class="exp-modal-hero-img" decoding="async" />
       <div class="exp-modal-hero-overlay"></div>
       
       <button class="exp-modal-close-btn" id="btn-close-exp-modal" aria-label="Cerrar ficha de experiencia">
@@ -371,7 +371,7 @@ function updateModalPricing(tourId) {
 
 function getWhatsAppBookingUrl(tour, currency, price) {
   const phone = "51930782790";
-  const message = `Hola Hanpinahuasi Travel, deseo consultar disponibilidad y reservar la siguiente experiencia:
+  const message = `Hola Hanpinawasi Travel, deseo consultar disponibilidad y reservar la siguiente experiencia:
 - Experiencia: ${tour.title}
 - Salida desde: ${tour.departureLocation || 'Cusco'}
 - Tarifa referencial: ${currency} ${price} por persona

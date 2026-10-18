@@ -42,7 +42,7 @@ body.nav-open .navbar {
   -webkit-backdrop-filter: none !important;
 }
 
-/* Logo Oficial Hanpinahuasi Travel */
+/* Logo Oficial Hanpinawasi Travel */
 .logo {
   font-family: var(--font-display);
   font-size: 1.45rem;
@@ -370,7 +370,7 @@ body.nav-open {
 
 /* ===================================================
    Rango 1: Pantallas de 1001px a 1270px
-   Muestra en la barra: Experiencias + Por qué Hanpinahuasi + Galería + ONG + Cambio de Dólar + Menú Hamburguesa
+   Muestra en la barra: Experiencias + Por qué Hanpinawasi + Galería + ONG + Cambio de Dólar + Menú Hamburguesa
    =================================================== */
 @media (min-width: 1001px) and (max-width: 1270px) {
   .header-wrapper {
@@ -410,7 +410,7 @@ body.nav-open {
     display: none !important;
   }
 
-  /* Mostrar: Experiencias, Por qué Hanpinahuasi, Galería, ONG */
+  /* Mostrar: Experiencias, Por qué Hanpinawasi, Galería, ONG */
   .nav-menu:not(.open) > li.nav-item-exp,
   .nav-menu:not(.open) > li.nav-item-why,
   .nav-menu:not(.open) > li.nav-item-gallery,
@@ -439,7 +439,7 @@ body.nav-open {
 
 /* ===================================================
    Rango 2: Pantallas de 851px a 1000px
-   Muestra en la barra: Experiencias + Por qué Hanpinahuasi + ONG + Cambio de Dólar + Menú Hamburguesa
+   Muestra en la barra: Experiencias + Por qué Hanpinawasi + ONG + Cambio de Dólar + Menú Hamburguesa
    =================================================== */
 @media (min-width: 851px) and (max-width: 1000px) {
   .header-wrapper {
@@ -478,7 +478,7 @@ body.nav-open {
     display: none !important;
   }
 
-  /* Mostrar: Experiencias, Por qué Hanpinahuasi, ONG */
+  /* Mostrar: Experiencias, Por qué Hanpinawasi, ONG */
   .nav-menu:not(.open) > li.nav-item-exp,
   .nav-menu:not(.open) > li.nav-item-why,
   .nav-menu:not(.open) > li.nav-item-ong {
