@@ -69,7 +69,7 @@ export const TOURS_DATA = [
     title: "Full Day Tour Valle Sagrado de los Incas",
     category: "cultural",
     categoryLabel: "Culturales & Arqueología",
-    tag: "Patrimonio Imperial",
+    tag: "Patrimonio Cultural",
     isFeatured: true,
     duration: "8 - 9 hrs aprox",
     departureLocation: "Centro Histórico del Cusco (Salida desde Cusco)",
@@ -84,7 +84,7 @@ export const TOURS_DATA = [
     pricingNote: "$40 por persona (Tour Grupal con Almuerzo Buffet de primera categoría)",
     image: "/images/fullday-valle-sagrado.webp",
     summary: "Salida desde Cusco al Valle Sagrado. Visita los centros arqueológicos de Pisaq, mercado artesanal, fortaleza viva de Ollantaytambo, Chinchero y almuerzo buffet gourmet.",
-    description: "El recorrido más completo por el corazón fértil del Imperio Incaico. Admira las terrazas agrícolas de Pisac suspendidas en la montaña, recorre las callejuelas incas intactas de Ollantaytambo y contempla la herencia textil milenaria en Chinchero, degustando un almuerzo buffet de alta cocina andina.",
+    description: "El recorrido más completo por el corazón fértil de la Cultura Incaica. Admira las terrazas agrícolas de Pisac suspendidas en la montaña, recorre las callejuelas incas intactas de Ollantaytambo y contempla la herencia textil milenaria en Chinchero, degustando un almuerzo buffet de alta cocina andina.",
     places: [
       "Pisaq Centro Arqueológico (3,300 msnm)",
       "Pisaq Mercado Típico Artesanal (2,972 msnm)",

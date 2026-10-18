@@ -108,7 +108,8 @@
 }
 
 .hero-title {
-  font-family: var(--font-hero);
+  font-family: var(--font-isometra, 'Isometra', 'Cinzel', Georgia, serif);
+  font-weight: 400;
   color: #FFFFFF;
   font-size: clamp(1.85rem, 6vw, 4rem);
   line-height: 1.15;
@@ -120,7 +121,8 @@
 
 .hero-title span {
   color: var(--color-gold-light);
-  font-style: italic;
+  font-style: normal;
+  font-weight: 400;
   text-shadow: 0 2px 20px rgba(212, 163, 115, 0.4), 0 4px 30px rgba(0, 0, 0, 0.8);
 }
 
