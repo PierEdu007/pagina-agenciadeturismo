@@ -4,7 +4,7 @@
  */
 
 import { TOURS_DATA, TOUR_CATEGORIES } from "../../data/tours.js";
-import { getCurrentCurrency, formatPrice } from "./currency.js";
+import { getCurrentCurrency, formatPrice, getTourPrice, getTourPrivatePrice } from "./currency.js";
 import { openBookingDrawer } from "./booking-engine.js";
 import { openExperienceModal } from "./experience-modal.js";
 import { initCarousel } from "./carousel.js";
@@ -28,7 +28,8 @@ export function renderTours(category = "all") {
     const slide = document.createElement("div");
     slide.className = "swiper-slide";
 
-    const price = currency === "USD" ? tour.priceUSD : tour.pricePEN;
+    const price = getTourPrice(tour, currency);
+    const privPrice = getTourPrivatePrice(tour, currency);
 
     slide.innerHTML = `
       <article class="tour-card" data-tour-id="${tour.id}" data-category="${tour.category}">
@@ -77,8 +78,8 @@ export function renderTours(category = "all") {
           <div class="tour-card-footer">
             <div class="tour-pricing">
               <span class="price-subtext" data-tour-subtext>
-                ${tour.pricePrivateUSD 
-                  ? (currency === "USD" ? `Grupal $${tour.priceUSD} · Privado $${tour.pricePrivateUSD}` : `Grupal S/ ${tour.pricePEN} · Privado S/ ${tour.pricePrivatePEN}`)
+                ${privPrice 
+                  ? (currency === "USD" ? `Grupal $${price} · Privado $${privPrice}` : `Grupal S/ ${price} · Privado S/ ${privPrice}`)
                   : "Tarifa por persona"}
               </span>
               <div class="price-amount" data-tour-price>
@@ -178,26 +179,27 @@ export function initTourTabs() {
     });
   });
 
-  // Escuchar cambio de moneda para actualizar tarjetas sin re-renderizar todo
+  // Escuchar cambio de moneda o actualización de tasa para actualizar tarjetas sin re-renderizar todo
   window.addEventListener("currency-change", (e) => {
-    const newCurrency = e.detail.currency;
+    const newCurrency = e.detail?.currency || getCurrentCurrency();
     document.querySelectorAll(".tour-card").forEach(card => {
       const tourId = card.dataset.tourId;
       const tour = TOURS_DATA.find(t => t.id === tourId);
       if (tour) {
+        const price = getTourPrice(tour, newCurrency);
+        const privPrice = getTourPrivatePrice(tour, newCurrency);
         const priceElement = card.querySelector("[data-tour-price]");
         if (priceElement) {
-          const price = newCurrency === "USD" ? tour.priceUSD : tour.pricePEN;
           priceElement.innerHTML = `
             ${formatPrice(price, newCurrency)}
             <span class="price-currency">${newCurrency}</span>
           `;
         }
         const subtextElement = card.querySelector("[data-tour-subtext]");
-        if (subtextElement && tour.pricePrivateUSD) {
+        if (subtextElement && privPrice) {
           subtextElement.textContent = newCurrency === "USD"
-            ? `Grupal $${tour.priceUSD} · Privado $${tour.pricePrivateUSD}`
-            : `Grupal S/ ${tour.pricePEN} · Privado S/ ${tour.pricePrivatePEN}`;
+            ? `Grupal $${price} · Privado $${privPrice}`
+            : `Grupal S/ ${price} · Privado S/ ${privPrice}`;
         }
       }
     });
