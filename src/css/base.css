@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn:hover i.fa-calendar-check,
 .btn:hover i.fa-compass,
-.btn:hover i.fa-hands-holding-heart,
+.btn:hover i.fa-hand-holding-heart,
 .btn:hover i.fa-heart {
   transform: scale(1.18) translateY(-1px);
 }

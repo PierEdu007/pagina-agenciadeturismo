@@ -80,4 +80,4 @@ pagina-agenciadeturismo/
 
 ## Licencia y Propiedad
 Todos los derechos reservados © 2026 Hanpinawasi Travel S.A.C. - Cusco, Perú.
-Registro DIRCETUR Nº: 4821-2024.
+Registro GERCETUR Nº: 4821-2024.

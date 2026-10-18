@@ -126,6 +126,7 @@
   height: auto;
   display: block;
   object-fit: cover;
+  object-position: center top;
   transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
 }
 

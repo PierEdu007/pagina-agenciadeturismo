@@ -23,6 +23,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 15%;
   opacity: 0.22;
   filter: saturate(0.8) contrast(1.1);
   pointer-events: none;
@@ -235,7 +236,7 @@
 
 .ong-pillar-media {
   position: relative;
-  height: 200px;
+  height: 240px;
   overflow: hidden;
 }
 
@@ -243,7 +244,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 10%;
   transition: transform var(--transition-normal);
+}
+
+.ong-pillar-media img[src*="mamita"],
+.ong-pillar-media img[src*="nino"],
+.ong-pillar-media img[src*="comunidad"],
+.ong-pillar-media img.focus-top {
+  object-position: center 6%;
 }
 
 .ong-pillar-card:hover .ong-pillar-media img {
@@ -425,6 +434,10 @@
   .ong-hero {
     padding: 7.5rem 1.25rem 3.5rem;
     min-height: 60vh;
+  }
+
+  .ong-pillar-media {
+    height: 220px;
   }
 
   .ong-quote-banner {
