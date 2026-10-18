@@ -4,7 +4,7 @@
  */
 
 import { TOURS_DATA } from "../../data/tours.js";
-import { getCurrentCurrency, formatPrice } from "./currency.js";
+import { getCurrentCurrency, formatPrice, getTourPrice, getPricingNote, getExchangeRate } from "./currency.js";
 import { openBookingDrawer } from "./booking-engine.js";
 import { stopLenis, startLenis } from "./scroll-effects.js";
 
@@ -110,7 +110,8 @@ export function openExperienceModal(tourId) {
   if (!backdrop || !dialog) return;
 
   const currency = getCurrentCurrency();
-  const price = currency === "USD" ? tour.priceUSD : tour.pricePEN;
+  const price = getTourPrice(tour, currency);
+  const rate = getExchangeRate();
 
   // Construcción del contenido del modal
   dialog.innerHTML = `
@@ -296,12 +297,12 @@ export function openExperienceModal(tourId) {
     <!-- Footer Fijo con Tarifa y Botones de Acción -->
     <div class="exp-modal-footer">
       <div class="exp-modal-pricing" id="modal-pricing-box">
-        <span class="exp-modal-pricing-sub">Tarifa oficial</span>
+        <span class="exp-modal-pricing-sub">${currency === "USD" ? `Tarifa referencial (T.C. S/ ${rate.toFixed(2)})` : "Tarifa oficial"}</span>
         <div class="exp-modal-pricing-main">
           ${formatPrice(price, currency)}
           <span class="exp-modal-pricing-currency">${currency}</span>
         </div>
-        <span class="exp-modal-pricing-note">${tour.pricingNote || 'Por persona (salida Cusco)'}</span>
+        <span class="exp-modal-pricing-note">${getPricingNote(tour, currency)}</span>
       </div>
 
       <div class="exp-modal-actions">
@@ -350,16 +351,17 @@ function updateModalPricing(tourId) {
   const tour = TOURS_DATA.find(t => t.id === tourId);
   if (!tour) return;
   const currency = getCurrentCurrency();
-  const price = currency === "USD" ? tour.priceUSD : tour.pricePEN;
+  const price = getTourPrice(tour, currency);
+  const rate = getExchangeRate();
   const pricingBox = document.getElementById("modal-pricing-box");
   if (pricingBox) {
     pricingBox.innerHTML = `
-      <span class="exp-modal-pricing-sub">Tarifa oficial</span>
+      <span class="exp-modal-pricing-sub">${currency === "USD" ? `Tarifa referencial (T.C. S/ ${rate.toFixed(2)})` : "Tarifa oficial"}</span>
       <div class="exp-modal-pricing-main">
         ${formatPrice(price, currency)}
         <span class="exp-modal-pricing-currency">${currency}</span>
       </div>
-      <span class="exp-modal-pricing-note">${tour.pricingNote || 'Por persona (salida Cusco)'}</span>
+      <span class="exp-modal-pricing-note">${getPricingNote(tour, currency)}</span>
     `;
   }
 

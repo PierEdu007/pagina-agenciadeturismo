@@ -4,7 +4,7 @@
  */
 
 import { TOURS_DATA } from "../../data/tours.js";
-import { getCurrentCurrency, formatPrice } from "./currency.js";
+import { getCurrentCurrency, formatPrice, getTourPrice, getExchangeRate } from "./currency.js";
 import { stopLenis, startLenis } from "./scroll-effects.js";
 
 let bookingState = {
@@ -316,7 +316,9 @@ function renderTourExtras(tour) {
   }
 
   tour.extras.forEach(extra => {
-    const extraPrice = bookingState.currency === "USD" ? extra.priceUSD : extra.pricePEN;
+    const extraPrice = bookingState.currency === "USD" 
+      ? (extra.priceUSD ?? Math.round(extra.pricePEN / getExchangeRate()))
+      : extra.pricePEN;
     const label = document.createElement("label");
     label.style.display = "flex";
     label.style.alignItems = "center";
@@ -355,11 +357,12 @@ function recalculateTotals() {
 
   const tour = bookingState.tour;
   const currency = bookingState.currency;
-  const baseRate = currency === "USD" ? tour.priceUSD : tour.pricePEN;
+  const baseRate = getTourPrice(tour, currency);
+  const rate = getExchangeRate();
 
   // Descuento del 30% en niños
-  const adultSubtotal = bookingState.adults * baseRate;
-  const childSubtotal = bookingState.children * (baseRate * 0.7);
+  const adultSubtotal = Math.round(bookingState.adults * baseRate);
+  const childSubtotal = Math.round(bookingState.children * (baseRate * 0.7));
 
   // Extras
   let extrasSubtotal = 0;
@@ -367,12 +370,14 @@ function recalculateTotals() {
   bookingState.extras.forEach(extraId => {
     const extraObj = tour.extras.find(e => e.id === extraId);
     if (extraObj) {
-      const extraRate = currency === "USD" ? extraObj.priceUSD : extraObj.pricePEN;
-      extrasSubtotal += extraRate * totalPax;
+      const extraRate = currency === "USD" 
+        ? (extraObj.priceUSD ?? Math.round(extraObj.pricePEN / rate))
+        : extraObj.pricePEN;
+      extrasSubtotal += Math.round(extraRate * totalPax);
     }
   });
 
-  const grandTotal = Math.round(adultSubtotal + childSubtotal + extrasSubtotal);
+  const grandTotal = adultSubtotal + childSubtotal + extrasSubtotal;
 
   // Actualizar UI del desglose
   const adultRow = document.getElementById("summary-adults-row");

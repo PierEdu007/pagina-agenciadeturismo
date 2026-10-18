@@ -137,7 +137,8 @@ export function getPricingNote(tour, currency = currentCurrency) {
   if (tour.pricePrivatePEN) {
     const privPrice = getTourPrivatePrice(tour, currency);
     const formattedPriv = formatPrice(privPrice, currency);
-    return `Grupal ${formattedPrice} / pers. · Privado ${formattedPriv} / pers.`;
+    const baseNote = tour.pricingNote ? ` · ${tour.pricingNote}` : "";
+    return `Grupal ${formattedPrice} / pers. · Privado ${formattedPriv} / pers.${baseNote}`;
   }
 
   const baseNote = tour.pricingNote ? ` · ${tour.pricingNote}` : "";
